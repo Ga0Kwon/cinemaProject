@@ -54,14 +54,18 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	
 	//1) input text를 통해 입력받은 값을 변수에 저장
 	let inputMovieName = document.querySelector('.searchMovieTitle').value;
+	let searchCategory = [];
 	
-	let bInputMovie = inputMovieName.trim()
-	console.log(bInputMovie)
 	/*영화 제목을 영화 객체 배열에서 찾는다. */
-	for(let i = 0; i < categoryArrays.length; i++){
-		if( inputMovieName == movieInfo[i].name){ //입력받은 카테고리명과 해당 인덱스의 배열 요소와 같을 경우
-			categorySelect(i) //카테고리 선택 함수를 실행해준다. -> 선택하면 자동으로 내용물도 바뀜.
+	for(let i = 0; i < movieInfo.length; i++){
+		if(movieInfo[i].name.includes(inputMovieName)){ //입력받은 영화 일부 혹은 전체 제목을 클릭했을 시 
+			searchCategory = movieInfo[i].category; //카테고리명을 가져오고
 		}
 	}
+	
+	for(let j = 0; j < categoryArrays.length; i++){//카테고리 배열의 크기만큼 반복하여 저장한 카테고리명으로 찾는다.
+		searchCategory.push(j)
+	}
+	
 	document.querySelector('.searchCategoryInfo').value = "" //선택했다면 카테고리 input 부분 초기화
 })
