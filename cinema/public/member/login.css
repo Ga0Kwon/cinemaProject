@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a { color: black !important; text-decoration: none !important; }
+.container{
+	margin-bottom: 40px;
+}
+
+.title_logo{
+	text-align: center;
+}
+
+.login_title img{
+	width: 80px;
+	height: 35px;
+}
+
+.login_img img{
+	width: 150px;
+	height: 220px;
+}
+
+.login_img{
+	text-align: center;
+	opacity: 0.6
+}
+
+.login_title{
+	text-align: center;
+	font-family: 'EliceDigitalBaeum-Bd'; font-size: 30px;
+	padding-top: 20px;
+}
+
+.login_box{
+	border: 1px solid #eeeeee; border-radius: 50px;
+	margin: 3% 26%;
+	font-size: 20px;
+	font-family: 'Happiness-Sans-Title';
+
+}
+
+.login_idpw{
+	display: flex;
+	justify-content: center;
+	margin: 3%
+}
+
+.login_btn{
+	display: flex; justify-content: center;
+	margin-left: 5px;
+	font-size: 22px;	
+}
+
+.login_btn div{
+	padding: 1%;
+	font-family: "EliceDigitalBaeum-Bd";
+}
+
+.login_btn button{
+	border: 1px solid #eeeeee; border-radius: 10px;
+	margin: 10px;
+}
+
+.login_chat_id{
+	padding-right: 30px;
+}
+
+.login_chat_pw{
+	padding-right: 12px;
+}
