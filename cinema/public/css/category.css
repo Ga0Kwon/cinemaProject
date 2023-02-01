@@ -37,8 +37,8 @@ body{
 .category_li li{
 	display: inline-block; /*가로 배치*/
 	font-weight : bold; /*폰트 두껍게*/
-	margin: 0px 10px; 
-	padding : 2px 6px;
+	margin: 3px 10px; 
+	padding : 3px 6px;
 }
 
 .categorySelect{ /*카테고리를 선택했을 때 디자인 바꿈*/
@@ -54,8 +54,74 @@ body{
 }
 /*--------------------------카테고리 선택 부분[ul] e-----------------------*/
 /*--------------------카테고리 선택 부분[input 입력으로] s--------------------*/
+.search_box{
+	display: flex;
+	margin-top : 0.5%;
+}
+.blank_container{
+	width : 65%; /*공백 부분*/
+}
 .d-flex{
 	align-items: center; /*카테고리 검색부분의 높이를 늘리는 것이 아니라 가운데 정렬[세로]*/
 	padding-bottom: 15px;
+	width : 35%; /*가로 사이즈*/
 }
 /*--------------------카테고리 선택 부분[input 입력으로] e--------------------*/
+/*-----------------영화 포스터와 제목, 평점, 연령가 출력하는 부분 s---------------*/
+/*영화 정보 여러개 들어가는 전체 화면*/
+.content{
+	display : flex;
+	flex-wrap : wrap;
+	border: 1px white solid;
+	width : 95%;
+	margin: 0 auto;
+}
+
+/*영화 요소 한개 묶음*/
+.movie_item{
+	background-color :#131313;
+	width : 20%;
+	margin: 3px 8px;
+	padding : 0.3%
+}
+
+.movie_item img{ /*영화 포스터 이미지*/
+	width : 95%;
+}
+/*이미지를 담고 있는 박스 구역*/
+.movie_img{
+	text-align: center;
+}
+
+/*평점이 들어가는 전체 칸*/
+.movie_grade{
+	background-color :#131313;
+	position: relative; /*별점을 넣을 상위 요소에 relative*/
+	color : #c7c7c7;
+	font-size: 26px !important;
+	margin: 0px 15px;
+}
+
+/*평점에 따라 별의 색을 채울 span*/
+.star_grade{
+	width : 0; /*평점이 없을 경우는 가로가 0이어야함. -> 평점에 따라 가로를 키워야하니까*/
+	position: absolute; /*하위요소인 star_grade에 absolute*/
+	/*상위 요소에 맞춰 겹쳐야하기 때문에 left, top => 0*/
+	left : 0;
+	top : 0;
+	color : #FE222D;
+	overflow: hidden; /*넘치면 숨긴다.*/
+}
+/*숫자로된 평점*/
+.number_grade{
+	position: absolute;
+	right :0;
+	top : 0;
+}
+
+.movie_TitleBox{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+/*-----------------영화 포스터와 제목, 평점, 연령가 출력하는 부분 e---------------*/
