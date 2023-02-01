@@ -40,7 +40,7 @@ function printCategoryList(){
 function categorySelect(categoryIndex){
 	//1) li 요소들을 category라는 배열에 넣음.
 	let categoryLi = document.querySelectorAll('.categoryItem')
-	console.log(categoryLi)
+	/*console.log(categoryLi)*/
 	for(let i = 0; i < categoryLi.length; i++){
 		if(i == categoryIndex){ /*받은 인덱스[클릭한 li 요소]와 배열의 인덱스가 같으면 css 스타일 적용 */
 			categoryLi[i].classList.add('categorySelect');
@@ -54,17 +54,21 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	
 	//1) input text를 통해 입력받은 값을 변수에 저장
 	let inputMovieName = document.querySelector('.searchMovieTitle').value;
-	let searchCategory = [];
+	console.log(inputMovieName)
+	let searchIndex = '';
 	
 	/*영화 제목을 영화 객체 배열에서 찾는다. */
 	for(let i = 0; i < movieInfo.length; i++){
-		if(movieInfo[i].name.includes(inputMovieName)){ //입력받은 영화 일부 혹은 전체 제목을 클릭했을 시 
-			searchCategory = movieInfo[i].category; //카테고리명을 가져오고
+		if(movieInfo[i].name.indexOf(inputMovieName)){ //입력받은 영화 일부 혹은 전체 제목을 클릭했을 시 
+			searchIndex = movieInfo[i].category; //카테고리명을 가져오고
+			console.log(searchIndex)
 		}
 	}
 	
-	for(let j = 0; j < categoryArrays.length; i++){//카테고리 배열의 크기만큼 반복하여 저장한 카테고리명으로 찾는다.
-		searchCategory.push(j)
+	for(let j = 0; j < categoryArrays.length; j++){ //카테고리 배열의 크기만큼 반복하여 저장한 카테고리명으로 찾는다.
+		if(searchCategory = categoryArrays[j]){ //카테고리 배열의 요소 값이 입력받은 영화제목의 카테고리명과 같다면
+			categorySelect(j)
+		}
 	}
 	
 	document.querySelector('.searchCategoryInfo').value = "" //선택했다면 카테고리 input 부분 초기화
