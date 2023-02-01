@@ -92,20 +92,41 @@ function printMovie(){
 	let html = ``
 	
 	for(let i = 0; i < movieInfo.length; i++){
+		let ageColor = movieAgeColor(i);
+		console.log(ageColor);
+		
 		html += `<div class = "movie_item">
 					<div class = "movie_img">
+						<span class = "movie_age" style = "background-color : ${ageColor} ">${movieInfo[i].age == 0 ? "전체" : movieInfo[i].age}</span>
 						<img src = "../img/${movieInfo[i].img}.jpg">
 					</div>
 					<div class = "movie_grade">
-						★★★★★
-						<span style="cursor: default;" class="star_grade">★★★★★</span>
-						<span class = "number_grade" style = "width : ${movieInfo[i].star*10}%">${movieInfo[i].star}</span>
+						★★★★★ 
+						<span style="cursor: default; width : ${movieInfo[i].star*6}% !important" " class="star_grade">★★★★★</span>
+						<span class = "number_grade">${movieInfo[i].star}</span>
 					</div>
 					<div class = "movie_TitleBox">
 						<span class = "movie_name">${movieInfo[i].name}</span>
 					</div>
 				</div> `
+				
+		/*movieInfo[i].star*6에서 6을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
+		  그래서, 10을 곱할 수는 없었고, 계산을 해보니 100%가 별 5개니까 별 한개당 20%인셈 
+		  만약, 별점이 7.99일경우 10을 곱하면 79.9이고, 별 한개가 20이니까 별 3개하고 19.9 별 3개에 거의 꽉 찬 별 한개가 칠해지면 됨.
+		  그렇게 나오도록 수를 곱해봤는데 6이 가장 적당했기 때문에, 6으로 선정*/
 	}
 	document.querySelector('.content').innerHTML = html;
+}
+/* 영화 관람 영령에 따라 관람가부분 백그라운드 바꿀 수 있도록 */
+function movieAgeColor(index){
+	if(movieInfo[index].age == 0){ //전체 관람가(0)이면 
+		return "#01A40A";
+	}else if(movieInfo[index].age > 0 && movieInfo[index].age <= 12){ //나이가 1세 이상 12세 이하면
+		return "#005BD4";
+	}else if(movieInfo[index].age > 12 && movieInfo[index].age <= 18){ //나이가 13세 이상 15세 이하면
+		return "#FF6B00";
+	}else if(movieInfo[index].age >= 19){ //청불 영화일경우(19세 이상)
+		return "#BD0027";
+	}
 }
 
