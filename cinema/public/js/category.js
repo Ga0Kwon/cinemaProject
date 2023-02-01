@@ -49,14 +49,17 @@ function categorySelect(categoryIndex){
 		}
 	}
 }
-/* 3. input을 통해 카테고리를 검색하려는 경우 [1) 카테고리 입력받았을 때]*/
+/* 3. input을 통해 영화를 검색하여 카테고리를 찾는 경우 [1) 영화제목을 입력받았을 때]*/
 document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	
 	//1) input text를 통해 입력받은 값을 변수에 저장
-	let inputCategory = document.querySelector('.searchCategoryInfo').value;
+	let inputMovieName = document.querySelector('.searchMovieTitle').value;
 	
+	let bInputMovie = inputMovieName.trim()
+	console.log(bInputMovie)
+	/*영화 제목을 영화 객체 배열에서 찾는다. */
 	for(let i = 0; i < categoryArrays.length; i++){
-		if( inputCategory == categoryArrays[i]){ //입력받은 카테고리명과 해당 인덱스의 배열 요소와 같을 경우
+		if( inputMovieName == movieInfo[i].name){ //입력받은 카테고리명과 해당 인덱스의 배열 요소와 같을 경우
 			categorySelect(i) //카테고리 선택 함수를 실행해준다. -> 선택하면 자동으로 내용물도 바뀜.
 		}
 	}
