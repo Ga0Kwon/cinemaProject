@@ -18,7 +18,7 @@ let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', catego
 /*------------------------js실행할때 실행시켜야하는 함수 start-------------------------*/
 
 printCategoryList();
-categorySelect(0); //기본값 카테고리 '드라마'
+categorySelect(0,0); //기본값 카테고리 '드라마'
 
 /*-------------------------js실행할때 실행시켜야하는 함수 end--------------------------*/
 
@@ -48,7 +48,11 @@ function categorySelect(categoryIndex){
 			categoryLi[i].classList.remove('categorySelect');
 		}
 	}
-	printMovie(categoryIndex); //카테고리를 선택할때, 카테고리별 영화를 출력해야하므로, 받은 인수를 전달해야한다.
+	if(findMovieName == 0){
+		printMovie(categoryIndex); //카테고리를 선택할때, 카테고리별 영화를 출력해야하므로, 받은 인수를 전달해야한다.
+	}else if(findMovieName != 0){
+		printSelectMovie(findMovieName);
+	}
 }
 /* 3. input을 통해 영화를 검색하여 카테고리를 찾는 경우 [1) 영화제목을 입력받았을 때]*/
 document.querySelector('.search_btn').addEventListener('click', (e)=>{
@@ -57,12 +61,12 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	let inputMovieName = document.querySelector('.searchMovieTitle').value;
 /*	console.log(inputMovieName)*/
 	let categoryTitle = []; //일부 혹은 전체 영화 제목이 들어간 카테고리명을 담을 변수
-	let findMovieName = ``; // 입력한 영화 이름을
+	let findMovieName = []; // 입력한 영화 이름을 배열에 저장 
 	for(let i = 0; i < movieInfo.length; i++){ //영화 정보를 담고 있는 객체 배열만큼 반복
 		console.log(movieInfo[i].name)
 		//input으로 입력받은 일부 혹은 전체 영화 제목(문자열)을 포함하고 있는 영화를 찾았다면.
 		if((movieInfo[i].name).includes(inputMovieName)){ 
-			findMovieName = movieInfo[i].name;
+			findMovieName.push(movieInfo[i].name);
 			categoryTitle = movieInfo[i].category //해당 인덱스의 카테고리를 저장한다.
 			console.log(categoryTitle)
 		}
@@ -72,7 +76,7 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	for(let i = 0; i < categoryArrays.length; i++){ //카테고리 배열의 크기만큼 반복하여 저장한 카테고리명으로 찾는다.
 		//0번째를 한 이유는, 제목을 입력하여 영화를 찾는 사람 입장에서 카테고리 창이 변하고 그러는 것은 상관이 없을 것 같아 빼주었다.
 		if(categoryTitle[0] == categoryArrays[i]){ //카테고리 배열의 요소 값이 입력받은 영화제목의 카테고리명과 같다면
-				categorySelect(i) //해당 카테고리 인덱스로 카테고리를 선택
+				categorySelect(i, findMovieName) //해당 카테고리 인덱스로 카테고리를 선택
 		}
 		//한 영화가 카테고리를 여러개 가지고 있을 수 있기 때문에 영화마다 가진 카테고리 수만큼 반복문을 돌려줘야한다.
 		/*for(let j = 0; j < categoryTitle.length; i++){ 
@@ -113,10 +117,10 @@ function printMovie(index){
 			}
 		}
 				
-		/*movieInfo[i].star*6에서 6을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
+		/*movieInfo[i].star*4.3에서 4.3을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
 		  그래서, 10을 곱할 수는 없었고, 계산을 해보니 100%가 별 5개니까 별 한개당 20%인셈 
 		  만약, 별점이 7.99일경우 10을 곱하면 79.9이고, 별 한개가 20이니까 별 3개하고 19.9 별 3개에 거의 꽉 찬 별 한개가 칠해지면 됨.
-		  그렇게 나오도록 수를 곱해봤는데 6이 가장 적당했기 때문에, 6으로 선정*/
+		  그렇게 나오도록 수를 곱해봤는데 6이 가장 적당했기 때문에, 4.3으로 선정*/
 	}
 	document.querySelector('.content').innerHTML = html;
 }
@@ -130,6 +134,15 @@ function movieAgeColor(index){
 		return "#FF6B00";
 	}else if(movieInfo[index].age >= 19){ //청불 영화일경우(19세 이상)
 		return "#BD0027";
+	}
+}
+/*입력한 영화만 출력하는 함수 */
+function printSelectMovie(movieName){
+	let html
+	for(let i = 0; i < movieInfo.length; i++){
+		if(movieInfo[i].name == movieName){
+			
+		}
 	}
 }
 
