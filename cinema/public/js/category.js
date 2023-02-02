@@ -4,16 +4,16 @@
 let categoryArrays = ['드라마', '멜로/로맨스', '뮤지컬', '판타지', '액션',
  				'코미디','스릴러','모험','SF','공포','애니메이션']
 /*영화 정보를 담은 객체 배열*/				
-let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', category : '애니메이션', age : 12, star : 9.24},
-				 {name : '장화신은 고양이', img : 'PussInBoots', category : '애니메이션', age : 0, star : 8.41},
-				 {name : '캐리의 슈퍼콜라', img : 'CarrieAndSuperKola', category : '애니메이션', age : 0, star : 8.69},
-				 {name : '교섭', img : 'ThePointMan', category : '드라마', age : 12, star : 6.30},
-				 {name : '아바타', img : 'avatar', category : '액션,모험,SF,스릴러', age : 12, star : 8.83},
-				 {name : '메간', img : 'M3GAN', category : '공포,스릴러,코미디', age : 15, star : 7.34},
-				 {name : '유령', img : 'phantom', category : '액션', age : 15, star : 6.75},,
-				 {name : '상견니', img : 'SomedayOrOneDay', category : '드라마,판타지,멜로/로맨스', age : 15, star : 7.83},
-				 {name : '영웅', img : 'Hero', category : '드라마,뮤지컬', age : 12, star : 8.41},
-				 {name : '오늘밤, 세계에서 이 사랑이 사라진다해도', img : 'EvenIfThisLoveDissappear', category : '멜로/로맨스', age : 12, star : 7.99}]
+let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', category : ['애니메이션'], age : 12, star : 9.24},
+				 {name : '장화신은 고양이', img : 'PussInBoots', category : ['애니메이션'], age : 0, star : 8.41},
+				 {name : '캐리의 슈퍼콜라', img : 'CarrieAndSuperKola', category : ['애니메이션'], age : 0, star : 8.69},
+				 {name : '교섭', img : 'ThePointMan', category : ['드라마'], age : 12, star : 6.30},
+				 {name : '아바타', img : 'avatar', category : ['액션','모험','SF','스릴러'], age : 12, star : 8.83},
+				 {name : '메간', img : 'M3GAN', category : ['공포','스릴러','코미디'], age : 15, star : 7.34},
+				 {name : '유령', img : 'phantom', category : ['액션'], age : 15, star : 6.75},
+				 {name : '상견니', img : 'SomedayOrOneDay', category : ['드라마','판타지','멜로/로맨스'], age : 15, star : 7.83},
+				 {name : '영웅', img : 'Hero', category : ['드라마','뮤지컬'], age : 12, star : 8.41},
+				 {name : '오늘밤, 세계에서 이 사랑이 사라진다해도', img : 'EvenIfThisLoveDissappear', category : ['멜로/로맨스'], age : 12, star : 7.99}]
 				 
 /*------------------------js실행할때 실행시켜야하는 함수 start-------------------------*/
 
@@ -28,7 +28,7 @@ function printCategoryList(){
 	let html = `<ul class = "nav">`
 	
 	for(let i = 0; i < categoryArrays.length; i++){ //카테고리 목록 배열만큼 반복
-		html += `<li class = "navbar-brand nav-item categoryItem" onClick = "categorySelect(${i})">${categoryArrays[i]}</li>`
+		html += `<li style="cursor: pointer;" class = "navbar-brand nav-item categoryItem" onClick = "categorySelect(${i})">${categoryArrays[i]}</li>`
 	}
 	
 	html += `</ul>`
@@ -48,28 +48,88 @@ function categorySelect(categoryIndex){
 			categoryLi[i].classList.remove('categorySelect');
 		}
 	}
+	printMovie(categoryIndex); //카테고리를 선택할때, 카테고리별 영화를 출력해야하므로, 받은 인수를 전달해야한다.
 }
 /* 3. input을 통해 영화를 검색하여 카테고리를 찾는 경우 [1) 영화제목을 입력받았을 때]*/
 document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	
 	//1) input text를 통해 입력받은 값을 변수에 저장
 	let inputMovieName = document.querySelector('.searchMovieTitle').value;
-	console.log(inputMovieName)
-	let searchIndex = '';
-	
-	/*영화 제목을 영화 객체 배열에서 찾는다. */
-	for(let i = 0; i < movieInfo.length; i++){
-		if(movieInfo[i].name.indexOf(inputMovieName)){ //입력받은 영화 일부 혹은 전체 제목을 클릭했을 시 
-			searchIndex = movieInfo[i].category; //카테고리명을 가져오고
-			console.log(searchIndex)
+/*	console.log(inputMovieName)*/
+	let categoryTitle = []; //일부 혹은 전체 영화 제목이 들어간 카테고리명을 담을 변수
+	let findMovieName = ``; // 입력한 영화 이름을
+	for(let i = 0; i < movieInfo.length; i++){ //영화 정보를 담고 있는 객체 배열만큼 반복
+		console.log(movieInfo[i].name)
+		//input으로 입력받은 일부 혹은 전체 영화 제목(문자열)을 포함하고 있는 영화를 찾았다면.
+		if((movieInfo[i].name).includes(inputMovieName)){ 
+			findMovieName = movieInfo[i].name;
+			categoryTitle = movieInfo[i].category //해당 인덱스의 카테고리를 저장한다.
+			console.log(categoryTitle)
 		}
 	}
+
 	
-	for(let j = 0; j < categoryArrays.length; j++){ //카테고리 배열의 크기만큼 반복하여 저장한 카테고리명으로 찾는다.
-		if(searchCategory = categoryArrays[j]){ //카테고리 배열의 요소 값이 입력받은 영화제목의 카테고리명과 같다면
-			categorySelect(j)
+	for(let i = 0; i < categoryArrays.length; i++){ //카테고리 배열의 크기만큼 반복하여 저장한 카테고리명으로 찾는다.
+		//0번째를 한 이유는, 제목을 입력하여 영화를 찾는 사람 입장에서 카테고리 창이 변하고 그러는 것은 상관이 없을 것 같아 빼주었다.
+		if(categoryTitle[0] == categoryArrays[i]){ //카테고리 배열의 요소 값이 입력받은 영화제목의 카테고리명과 같다면
+				categorySelect(i) //해당 카테고리 인덱스로 카테고리를 선택
 		}
+		//한 영화가 카테고리를 여러개 가지고 있을 수 있기 때문에 영화마다 가진 카테고리 수만큼 반복문을 돌려줘야한다.
+		/*for(let j = 0; j < categoryTitle.length; i++){ 
+			if(categoryTitle[j] == categoryArrays[i]){ //카테고리 배열의 요소 값이 입력받은 영화제목의 카테고리명과 같다면
+				let index = categoryTitle[0]
+				categorySelect(index) //해당 카테고리 인덱스로 카테고리를 선택
+			}	
+		}*/
 	}
 	
-	document.querySelector('.searchCategoryInfo').value = "" //선택했다면 카테고리 input 부분 초기화
+	document.querySelector('.searchMovieTitle').value = "" //선택했다면 카테고리 input 부분 초기화
 })
+
+/*영화를 출력하는 함수 */
+function printMovie(index){
+	//기본 html 구성
+	let html = ``
+	
+	for(let i = 0; i < movieInfo.length; i++){
+		let ageColor = movieAgeColor(i);
+		/*console.log(ageColor);*/
+		for(let j = 0; j < movieInfo[i].category.length; j++){
+			if(movieInfo[i].category[j] == categoryArrays[index]){ //영화별로 장르가 한개인게 아니라, 반복문 중첩이어야한다.
+				html += `<div class = "movie_item">
+							<div class = "movie_img">
+							<span class = "movie_age" style = "background-color : ${ageColor} ">${movieInfo[i].age == 0 ? "전체" : movieInfo[i].age}</span>
+							<img src = "../img/${movieInfo[i].img}.jpg">
+						</div>
+						<div class = "movie_grade">
+							★★★★★ 
+							<span style="cursor: default; width : ${movieInfo[i].star*4.3}% !important" " class="star_grade">★★★★★</span>
+							<span class = "number_grade">${movieInfo[i].star}</span>
+						</div>
+						<div class = "movie_TitleBox">
+							<span class = "movie_name">${movieInfo[i].name}</span>
+						</div>
+					</div> `
+			}
+		}
+				
+		/*movieInfo[i].star*6에서 6을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
+		  그래서, 10을 곱할 수는 없었고, 계산을 해보니 100%가 별 5개니까 별 한개당 20%인셈 
+		  만약, 별점이 7.99일경우 10을 곱하면 79.9이고, 별 한개가 20이니까 별 3개하고 19.9 별 3개에 거의 꽉 찬 별 한개가 칠해지면 됨.
+		  그렇게 나오도록 수를 곱해봤는데 6이 가장 적당했기 때문에, 6으로 선정*/
+	}
+	document.querySelector('.content').innerHTML = html;
+}
+/* 영화 관람 영령에 따라 관람가부분 백그라운드 바꿀 수 있도록 */
+function movieAgeColor(index){
+	if(movieInfo[index].age == 0){ //전체 관람가(0)이면 
+		return "#01A40A";
+	}else if(movieInfo[index].age > 0 && movieInfo[index].age <= 12){ //나이가 1세 이상 12세 이하면
+		return "#005BD4";
+	}else if(movieInfo[index].age > 12 && movieInfo[index].age <= 18){ //나이가 13세 이상 15세 이하면
+		return "#FF6B00";
+	}else if(movieInfo[index].age >= 19){ //청불 영화일경우(19세 이상)
+		return "#BD0027";
+	}
+}
+

@@ -106,7 +106,11 @@ function info( tap ){
 //하단 유저 리뷰
 function evaluate_print( N ){
 	let eva ='';
-
+	evaluate[`${N}`].forEach((o)=>{
+		eva += `<div class="user_star">${o.user_1.netizen}</div>
+				<div class="user_star">${o.user_1.comment}</div>	`
+	
+	})
 	
 	
 	document.querySelector('.evaluate').innerHTML = eva;
