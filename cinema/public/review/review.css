@@ -1,0 +1,73 @@
+
+*{padding:0px; margin:0px; }
+.wrap{background-color:rgba(0,0,0,0.5);
+	/* overflow:scroll;  position:fixed; 스크롤 안생김*/
+	top:0; left:0; 
+	width:100%; height:100%;
+	display:flex; flex-direction: column;
+	justify-content: center;align-items: center;
+	z-index:1030;
+	/* 초기 */
+	
+	}
+
+
+/* 상단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+.top_movie_information, .midder_information
+{padding:2% 5%; display:flex; background-color:white;
+justify-content: space-between; width:100%;}
+
+.top_summary{display: flex; justify-content: space-between;
+			padding:3% 5%; flex-direction: column; }
+
+/* 개요,감독,출연,등급,흥행 */
+.top_introduce{width:100%; padding:1% 0%; border-bottom:1px solid #F0F0F0;}
+
+/*  제목2개  */
+.t_title{border-bottom:1px solid #F0F0F0; padding-bottom:10px;}
+
+.title{font-weight: bold;}
+/* 영문제목 */
+.e_title{ font-size:12px; color:gray;}
+
+
+/* 별점 */
+.rating{padding:3% 0%; border-bottom:1px solid #F0F0F0; 
+		font-size:20px; font-weight: bold; 
+		display:flex; flex-direction: column;}
+.score{display:flex;}
+.star{width:100px; background-position: top; }
+.star, .right-star{  background:url("../movies/img/별점.png")no-repeat; 
+width:100px; height: 18px; display:inline-block;
+ margin:5px 0px 0px 5px;}
+.right-star{background-position:left bottom; margin:0px;  vertical-align:top; }		
+
+
+/* 개요,감독,출현,등급,흥행 */
+.summary{ font-size:14px; padding:2px 0px; text-align: left; }
+
+/* 요약 서브제목 */
+.sub_title{font-weight: bold; font-size:16px; padding-right:5px;}
+
+/* 요약 설명 */
+.capsule{padding:2px;}
+
+/* 이미지 */
+.movie_img{width:25%; padding-right:3%;}
+.movie_img img{width:100%; border:1px solid #F0F0F0; }
+
+/* 중단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+/* 중단정보창 */
+.informatioin{width:100%; }
+
+/* 영화 탭 */
+.movie_tap{list-style: none; border-top:2px solid black; padding-left:0px;
+border-bottom:1px solid gray;}
+.movie_tap li{display:inline-block; cursor:pointer;
+padding:10px;}
+
+
+/* 줄거리 */
+.plot{font-size:25px; font-weight: bold;}
+.story{width:100%; font-family: 나눔고딕;  padding-bottom:5%;
+line-height: 2.3; font-size:14px;}
