@@ -48,6 +48,7 @@ function categorySelect(categoryIndex){
 			categoryLi[i].classList.remove('categorySelect');
 		}
 	}
+	printMovie(categoryIndex); //카테고리를 선택할때, 카테고리별 영화를 출력해야하므로, 받은 인수를 전달해야한다.
 }
 /* 3. input을 통해 영화를 검색하여 카테고리를 찾는 경우 [1) 영화제목을 입력받았을 때]*/
 document.querySelector('.search_btn').addEventListener('click', (e)=>{
@@ -56,11 +57,12 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	let inputMovieName = document.querySelector('.searchMovieTitle').value;
 /*	console.log(inputMovieName)*/
 	let categoryTitle = []; //일부 혹은 전체 영화 제목이 들어간 카테고리명을 담을 변수
-	
+	let findMovieName = ``; // 입력한 영화 이름을
 	for(let i = 0; i < movieInfo.length; i++){ //영화 정보를 담고 있는 객체 배열만큼 반복
 		console.log(movieInfo[i].name)
 		//input으로 입력받은 일부 혹은 전체 영화 제목(문자열)을 포함하고 있는 영화를 찾았다면.
 		if((movieInfo[i].name).includes(inputMovieName)){ 
+			findMovieName = movieInfo[i].name;
 			categoryTitle = movieInfo[i].category //해당 인덱스의 카테고리를 저장한다.
 			console.log(categoryTitle)
 		}
@@ -84,31 +86,32 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	document.querySelector('.searchMovieTitle').value = "" //선택했다면 카테고리 input 부분 초기화
 })
 
-printMovie();
-
 /*영화를 출력하는 함수 */
-function printMovie(){
+function printMovie(index){
 	//기본 html 구성
 	let html = ``
 	
 	for(let i = 0; i < movieInfo.length; i++){
 		let ageColor = movieAgeColor(i);
-		console.log(ageColor);
-		
-		html += `<div class = "movie_item">
-					<div class = "movie_img">
-						<span class = "movie_age" style = "background-color : ${ageColor} ">${movieInfo[i].age == 0 ? "전체" : movieInfo[i].age}</span>
-						<img src = "../img/${movieInfo[i].img}.jpg">
-					</div>
-					<div class = "movie_grade">
-						★★★★★ 
-						<span style="cursor: default; width : ${movieInfo[i].star*6}% !important" " class="star_grade">★★★★★</span>
-						<span class = "number_grade">${movieInfo[i].star}</span>
-					</div>
-					<div class = "movie_TitleBox">
-						<span class = "movie_name">${movieInfo[i].name}</span>
-					</div>
-				</div> `
+		/*console.log(ageColor);*/
+		for(let j = 0; j < movieInfo[i].category.length; j++){
+			if(movieInfo[i].category[j] == categoryArrays[index]){ //영화별로 장르가 한개인게 아니라, 반복문 중첩이어야한다.
+				html += `<div class = "movie_item">
+							<div class = "movie_img">
+							<span class = "movie_age" style = "background-color : ${ageColor} ">${movieInfo[i].age == 0 ? "전체" : movieInfo[i].age}</span>
+							<img src = "../img/${movieInfo[i].img}.jpg">
+						</div>
+						<div class = "movie_grade">
+							★★★★★ 
+							<span style="cursor: default; width : ${movieInfo[i].star*4.3}% !important" " class="star_grade">★★★★★</span>
+							<span class = "number_grade">${movieInfo[i].star}</span>
+						</div>
+						<div class = "movie_TitleBox">
+							<span class = "movie_name">${movieInfo[i].name}</span>
+						</div>
+					</div> `
+			}
+		}
 				
 		/*movieInfo[i].star*6에서 6을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
 		  그래서, 10을 곱할 수는 없었고, 계산을 해보니 100%가 별 5개니까 별 한개당 20%인셈 
