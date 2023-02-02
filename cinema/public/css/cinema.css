@@ -1,4 +1,4 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 @font-face {
     font-family: 'LINESeedKR-Bd';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
@@ -13,14 +13,14 @@ a{
 	text-decoration: none;
 	color: #ffffff !important;
 }
-/*---------------«Ï¥ı ∏ﬁ¥∫---------------*/
+/*---------------Ìó§Îçî Î©îÎâ¥---------------*/
 .topmenu{
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
 	font-size: 15px;
 }
-/*---------------∑Œ∞Ì---------------*/
+/*---------------Î°úÍ≥†---------------*/
 .logo{
 	font-family: 'LINESeedKR-Bd';
 	font-size: 80px;
@@ -28,7 +28,7 @@ a{
 	text-align: center;
 	padding: 10px 0px;
 }
-/*---------------∏ﬁ¿Œ ∏ﬁ¥∫---------------*/
+/*---------------Î©îÏù∏ Î©îÎâ¥---------------*/
 .mainmenu{
 	display: flex;
 	justify-content: flex-start;
@@ -42,7 +42,7 @@ a{
 }
 /* .line{ border-bottom: 2px solid #ff0080; } */
 .nav-item{ margin: 0px 10px; }
-/*---------------∞Àªˆ---------------*/
+/*---------------Í≤ÄÏÉâ---------------*/
 .searchbox{
 	padding: 4px;
 }
@@ -51,7 +51,7 @@ a{
 	border: none;
 	padding: 7px 12px;
 }
-/*---------------∆˜Ω∫≈Õ---------------*/
+/*---------------Ìè¨Ïä§ÌÑ∞---------------*/
 .itembox{
 	display: flex;
     flex-wrap: wrap;
@@ -71,7 +71,7 @@ a{
 	font-size: 10px;
 	background-color: #ff0080;
 }
-/*---------------π›¿¿«¸---------------*/
+/*---------------Î∞òÏùëÌòï---------------*/
 @media(max-width: 500px){
 	.bannerimg , .search{
 		display: none;
