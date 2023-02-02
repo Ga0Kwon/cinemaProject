@@ -11,7 +11,7 @@
 	color : white;
 }
 body{
-	background-color: #727272;
+	background-color: #575757;
 }
 /* 페이지 내용이 들어갈 전체 화면 */
 .category_wrap{
@@ -24,7 +24,7 @@ body{
 }
 
 /*h3 부분*/
-.category_title{
+.h_title{
 	font-family: KorailRoundGothicBold; /*외부 폰트*/
 	text-align: center; /*텍스트 가운데 정렬*/
 	border-bottom: 1px solid white;
