@@ -9,10 +9,11 @@
 	/* 초기 */
 	display:none;}
 
+
 /* 상단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-.top_movie_information, .midder_information
+.top_movie_information, .midder_information, .footer_information
 {padding:2% 5%; display:flex; background-color:white; 
-justify-content: space-between; width:100%;}
+justify-content: space-between; width:100%; border-bottom:2px solid black;}
 
 .top_summary{display: flex; justify-content: space-between; 
 			padding:3% 5%; flex-direction: column; }
@@ -69,5 +70,5 @@ padding:10px;}
 .data{ color:black;}
 
 /*하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-
-
+.evaluate{color:black;}
+.user_content{color:black;}

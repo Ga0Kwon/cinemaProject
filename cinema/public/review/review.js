@@ -78,7 +78,7 @@ function introduce( N ){
 	document.querySelector('.movie_img').innerHTML = movie_img;
 	
 	info('story')
-	/*evaluate_print(N)*/
+	evaluate_print(N)
 }
 
 //중단 줄거리 예고편 출력
@@ -95,17 +95,17 @@ function info( tap ){
 	document.querySelector('.data').innerHTML = info
 }
 
-/*//하단 유저 리뷰
-function evaluate_print( N ){
+//하단 유저 리뷰
+function evaluate_print( idx ){
 	let eva ='';
-	evaluate[`${N}`].forEach((o)=>{
-		eva += `<div class="user_star">${o.user_1.netizen}</div>
-				<div class="user_star">${o.user_1.comment}</div>	`
 	
+	evaluate[idx].user.forEach((o)=>{
+		eva += `<div >${o.netizen}</div>`
+		eva += `<div class="user_content">${o.comment}</div>`
 	})
 	
 	
 	document.querySelector('.evaluate').innerHTML = eva;
 }
-*/
+
 

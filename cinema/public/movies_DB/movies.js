@@ -98,7 +98,20 @@ let movies = [
 	 Actor:['앨리슨 윌리암스','바이올렛 맥그로우'],
 	 director:'제라드 존스톤', grade:'15세 관람가', 
 	 total_viewers:60835 , img:'메간.jpg',
-	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/G066QXvMVjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'},
+	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/G066QXvMVjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+	 story:`너의 영원한 친구가 되어줄게<br/>
+교통사고로 부모를 잃고 혼자가 된 소녀 ‘케이디’.<br/>
+ 로봇 엔지니어이자, ‘케이디’의 보호자가 된 ‘젬마’는<br/>
+ ‘케이디’를 안전하게 지켜야 하는 프로그램이 입력된 AI 로봇 ‘메간’을 선물한다.<br/>
+ <br/>
+ 메간은 언제나 ‘케이디’의 곁을 지켜주며<br/>
+ 함께 웃고, 힘들 땐 위로해주는 둘도 없는 친구가 된다.<br/>
+ <br/>
+ 어느 날, ‘케이디’가 위험에 처하자<br/>
+ ‘메간’은 예측할 수 없는 방향으로 업그레이드되며<br/>
+ 감당할 수 없는 일들이 벌어지는데…<br/>
+ <br/>
+ 우정에 OFF는 없어. 영원히<br/>`},
 	 
 	   {title: '영웅', e_title:'Hero',
 	 viewers:8.42, netizen:9.00, play:120, release:'2022.12.21',
