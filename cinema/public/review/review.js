@@ -100,10 +100,19 @@ function evaluate_print( idx ){
 	let eva ='';
 	
 	evaluate[idx].user.forEach((o)=>{
-		eva += `<div >${o.netizen}</div>`
-		eva += `<div class="user_content">${o.comment}</div>`
+		
+		eva += `<div class="user">
+				  <div class="user_star"> 
+					  <div class="u_star">
+							<span class="u_right_star" style="width:${o.netizen*10}%"></span>
+					  </div>
+				  </div>
+				  <div class="u_star_num"> ${o.netizen} </div> 
+				  <div class="user_content"> ${o.comment} </div>
+				</div>`
+					
+
 	})
-	
 	
 	document.querySelector('.evaluate').innerHTML = eva;
 }
