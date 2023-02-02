@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* 폰트 */
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* a태그 기본값 */
+a { color: black !important; text-decoration: none !important; }
+
+/* 헤더 부분*/
+.main{padding-bottom: 60px;}
+
+.wrap{ background-color: #eeeeee;}
+/*------------------------------로그인 페이지 시작----------*/
+
+
+
+/* 로그인 타이틀 글자*/
+.login_title{
+	text-align: center;
+	font-family: 'EliceDigitalBaeum-Bd'; font-size: 30px;
+	padding-top: 20px;
+}
+
+/* 로고 img */
+.login_title img{
+	text-align: center;
+	width: 80px;
+	height: 40px;
+}
+
+/* 로그인 박스 */
+.login_box{
+	border: 3px dotted #5a5a5a; border-radius: 50px;
+	margin: 3% 26%; padding-top : 2%;
+	font-size: 20px;
+	font-family: 'Happiness-Sans-Title';
+}
+
+/* 로그인 박스 아이디, 비밀번호 위치*/
+.login_idpw{
+	display: flex;
+	justify-content: center;
+	margin: 3%
+}
+
+/* 로그인 btn*/
+.login_btn{
+	display: flex; justify-content: center;
+	font-size: 18px; margin-left: 5px;
+}
+.login_btn div{
+	padding: 1%;
+	font-family: "EliceDigitalBaeum-Bd";
+}
+.login_btn button{
+	border: 1px solid #646464; border-radius: 10px;
+	margin: 10px;
+	background-color: white;
+}
+
+/* 로그인박스 글자*/
+.login_chat_id{
+	padding-right: 30px;
+	font-family: 'Humanbumsuk';
+}
+
+/* 로그인박스 글자*/
+.login_chat_pw{
+	padding-right: 12px;
+	font-family: 'Humanbumsuk';
+}
+
+/* 로그인 input 박스*/
+.login_idpw input{
+	border-radius: 5px;
+}
+
+/* 에러 표시 */
+.id_error, .pw_error, .error{
+	text-align: center;
+	font-size: 8px;
+	display: none;
+	color: red;
+}
+
+/* 로그인 페이지 영화 포스터*/
+.login_img{
+	text-align: center;
+}
+.login_img img{
+	width: 150px;
+	height: 220px;
+	margin-bottom: 40px;
+}
+
