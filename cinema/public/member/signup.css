@@ -21,10 +21,15 @@
 /* a태그 기본값 */
 a { color: black !important; text-decoration: none !important; }
 
+/* null 값 텍스트 */
+.id_null, .pw_null, .pwcheck_null, .name_null,
+.mw_null
+{ color:red; font-size: 7px; display: none; }
+
 /* 회원가입 페이지 배경 */
 .wrap{ 
 	background-color: #eeeeee;
-	width: 630px; height: 650px;
+	width: 600px; height: 680px;
 	margin: 0 auto;
 	padding-top: 2%;
 }
@@ -33,7 +38,6 @@ a { color: black !important; text-decoration: none !important; }
 .signup_title{
 	text-align: center;
 	font-family: 'EliceDigitalBaeum-Bd'; font-size: 30px;
-	padding-top: 20px;
 }
 
 /* 회원가입 img */
@@ -41,21 +45,26 @@ a { color: black !important; text-decoration: none !important; }
 	text-align: center;
 	width: 80px;
 	height: 40px;
+	margin: 0 auto;	
 }
 
 /* 회원가입 텍스트 */
 .text{
 	width: 200px; height: 60px;
 	margin: 0 auto;
-	padding: 5% 0%;
-	font-family: 'PuradakGentleGothicR';
+	padding: 30px 0px 50px 0px;
 }
 
 /* 회원가입 input box */
 .text input{
 	border: 1px solid #eeeeee;
-	border-radius: 15px;
+	border-radius: 10px;
+	margin-top: 5px;
 }	
+
+/* 생년월일 */
+
+
 
 /* 회원가입 버튼*/
 .row button{
@@ -63,7 +72,9 @@ a { color: black !important; text-decoration: none !important; }
 	border: 1px solid #eeeeee; border-radius: 20px;
 	background-color: white;
 	font-family: 'EliceDigitalBaeum-Bd'; font-size: 15px; 
+	margin-top: 5%;
 }
+
 
 	
 	
