@@ -146,12 +146,26 @@ function movieAgeColor(index){
 function printInputNameMovie(findMovieName){
 	let html = ``;
 	
+	let findMovieCategory = [];
+	
+	for(let i = 0; i < movieInfo.length; i++){
+		for(let j = 0; j < findMovieName.length; j++){
+			//영화 객체 배얄에 있는 영화 제목과 인수로 받은 영화제목배열의 요소값이 일치할때
+			if(findMovieName[j] == movieInfo[i].name){ 
+				/* 카테고리 배열의 영화 배열의 카테고리명을 넣는다. */
+				findMovieCategory.push(movieInfo[i].category)
+			}
+		}
+	}
+	
 	for(let i = 0; i < movieInfo.length; i++){
 		let ageColor = movieAgeColor(i); //관람가에 따른 색상 변경함수 반환값 저장
 		for(let j = 0; j < findMovieName.length; j++){
+			/* 해당 영화의 카테고리와 영화 이름 배열과 크기는 같을 수밖에 없음 */
 			if(movieInfo[i].name == findMovieName[j]){ //만약 인수로 받아온 영화이름과 객체배열 영화이름과 같다면 출력해줘야함!
 				html += `<div class = "movie_item">
 							<div class = "movie_img">
+							<span class = "movie_category">${findMovieCategory[j]}</span>
 							<span class = "movie_age" style = "background-color : ${ageColor} ">${movieInfo[i].age == 0 ? "전체" : movieInfo[i].age}</span>
 							<img src = "../img/${movieInfo[i].img}.jpg">
 						</div>
