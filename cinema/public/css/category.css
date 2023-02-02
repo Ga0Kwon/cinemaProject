@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 *{
 	color : white;
 }
@@ -18,7 +25,7 @@ body{
 
 /*h3 부분*/
 .category_title{
-	font-family: OTWelcomeRA; /*외부 폰트*/
+	font-family: KorailRoundGothicBold; /*외부 폰트*/
 	text-align: center; /*텍스트 가운데 정렬*/
 	border-bottom: 1px solid white;
 	padding: 2% 0%;
