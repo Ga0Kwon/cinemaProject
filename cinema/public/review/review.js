@@ -1,14 +1,24 @@
-function a(){
-	console.log('클릭');
-	document.querySelector('.wrap').style.display="block";
+//포스터에 클릭한 영화 배열 확인용
+let Num = 0; 
+
+//영화 포스터
+post();
+function post(){
+	let post = '';
+	 movies.forEach((obj,idx)=>{
+		 post += `<img src="../movies_DB/img/${obj.img}" onclick="introduce(${idx})">`
+	 })
+	 document.querySelector('.post').innerHTML = post
 }
 
 //영화의 상세내용 출력문
-introduce();
-function introduce(){
+
+function introduce( N ){
+	Num = N;
+	document.querySelector('.wrap').style.display="block"
 	let title = `<div class="t_title">
-						<h3 class="title">${movies[0].title}</h3>
-						<span class="e_title">${movies[0].e_title}</span>
+						<h3 class="title">${movies[N].title}</h3>
+						<span class="e_title">${movies[N].e_title}</span>
 					</div>`
 	
 	document.querySelector('.top_title').innerHTML = title
@@ -17,16 +27,16 @@ function introduce(){
 	let rating = `<div class="rating">
 
 						<div class="score">
-						<div class="viewer">관람객: ${movies[0].viewers}</div> 
+						<div class="viewer">관람객: ${movies[N].viewers}</div> 
 							<div class="star">
-								<span class="right-star" style="width:${movies[0].viewers*10}%"></span>
+								<span class="right-star" style="width:${movies[N].viewers*10}%"></span>
 							</div>
 						</div> 
 					     
 					     <div class="score">
-						<div class="viewer">네티즌: ${movies[0].netizen}</div> 
+						<div class="viewer">네티즌: ${movies[N].netizen}</div> 
 							<div class="star">
-								<span class="right-star" style="width:${movies[0].netizen*10}%"></span>
+								<span class="right-star" style="width:${movies[N].netizen*10}%"></span>
 							</div>
 						</div>
 				  </div>`
@@ -37,23 +47,23 @@ function introduce(){
 					 	<span class="sub_title">개요 </span>` 
 		
 		 //무비의 카테고리를 순회한다.
-		movies[0].category.forEach((obj)=>{
+		movies[N].category.forEach((obj)=>{
 			details += `<span class="capsule">${obj} | </span>`
 		})	
 					 	
-			details += `<span class="capsule"> ${movies[0].country} |</span>
-						<span class="capsule">${movies[0].play}분 |</span>
-						<span class="capsule">${movies[0].release}개봉</span>
+			details += `<span class="capsule"> ${movies[N].country} |</span>
+						<span class="capsule">${movies[N].play}분 |</span>
+						<span class="capsule">${movies[N].release}개봉</span>
 					</div>
 					
 					<div class="summary">
 					 	<span class="sub_title">감독 </span> 
-						<span class="capsule">${movies[0].director} </span> 
+						<span class="capsule">${movies[N].director} </span> 
 					</div>
 					
 					<div class="summary">
 					 	<span class="sub_title">출연 </span> `
-		movies[0].Actor.forEach((obj)=>{
+		movies[N].Actor.forEach((obj)=>{
 			details += `<span class="capsule">${obj}  | </span>`
 		})	
 		
@@ -61,38 +71,45 @@ function introduce(){
 					
 					<div class="summary">
 					 	<span class="sub_title">등급 </span> 
-						<span class="capsule">[국내]${movies[0].grade} </span> 
+						<span class="capsule">[국내]${movies[N].grade} </span> 
 					</div>
 					
 					<div class="summary">
 					 	<span class="sub_title">흥행 </span> 
-						<span class="capsule">${movies[0].total_viewers.toLocaleString()}명 </span> 
+						<span class="capsule">${movies[N].total_viewers.toLocaleString()}명 </span> 
 					</div>`		
 							
 	document.querySelector('.top_introduce').innerHTML = details;
 	
-	let movie_img = `<img src="../movies_DB/img/${movies[0].img}">` 
+	let movie_img = `<img src="../movies_DB/img/${movies[N].img}">` 
 	
 	document.querySelector('.movie_img').innerHTML = movie_img;
-
+	
+	info('story')
+	evaluate_print(N)
 }
 
-
-info( 'story' )
+//중단 줄거리 예고편 출력
 function info( tap ){
 	let info ='';
 	if(tap == 'story'){
-		info +=`${Tap[0].story}`
+		info +=`${movies[Num].story}`
 	}
 	
 	if(tap == 'tralier'){
-		info +=`${Tap[0].tralier}`
+		info +=`${movies[Num].tralier}`
 	}	
-	
 	
 	document.querySelector('.data').innerHTML = info
 }
 
+//하단 유저 리뷰
+function evaluate_print( N ){
+	let eva ='';
 
+	
+	
+	document.querySelector('.evaluate').innerHTML = eva;
+}
 
 
