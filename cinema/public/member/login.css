@@ -14,13 +14,49 @@
     font-style: normal;
 }
 
-/* a태그 기본값 */
-a { color: black !important; text-decoration: none !important; }
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
-/* 헤더 부분*/
-.main{padding-bottom: 80px; border: 1px solid red;}
+
+/* a태그 기본값 */
+a { color: white !important; text-decoration: none !important; }
 
 .wrap{ background-color: #eeeeee;}
+
+/*---------------헤더 메뉴---------------*/
+.header{
+	background-color: #2c2c2c;
+}
+
+.topmenu{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	font-size: 15px;
+	font-style: white;
+	font-family: 'LINESeedKR-Bd';
+}
+
+.movelink{ 
+	font-size: 15px;
+	font-family: 'LINESeedKR-Bd'; }
+
+.movelink li{
+	color: white;
+}
+	
+/*---------------로고---------------*/
+.logo{
+	font-size: 80px;
+	text-align: center;
+	color:#ff0000;
+	
+}
+
 /*------------------------------로그인 페이지 시작----------*/
 
 
