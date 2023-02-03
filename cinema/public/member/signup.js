@@ -87,14 +87,9 @@ function singupbtn(){ // f s
 	}
 	
 	// 유효성검사 통과했을 경우 모달박스 켜기
-	if(check) { document.querySelector('.modal_wrap').style.display = 'block';  }
+	if(check) { location.href = 'login.html'; } 
 	
 }// f e
 
-/* location.href = 'login.html'; */
-
-// 모달 기능
-	// 모달 닫기
-function modal(){location.href = 'login.html';}
 
 
