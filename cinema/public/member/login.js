@@ -38,7 +38,7 @@ function login(){
 		for ( let i = 0 ; i < userArray.length; i++){
 			// 아이디, 비밀번호 확인완료 후 메인페이지로 이동
 		if(userArray[i].id == id && userArray[i].pw == pw){ 
-			main_move();
+			location.href="signup.html"
 			// 아이디, 비밀번호 틀렸을 경우 오류메시지 전달
 		} if (userArray[i].id != id && userArray[i].pw != pw && id.length != 0 && pw.length != 0  ){
 			document.querySelector('.error').style.display = 'block';
@@ -48,8 +48,4 @@ function login(){
 	}
 }
 
-// 메인페이지로 이동시킬 예정
-function main_move(){
-	location.href="signup.html"
-}
 
