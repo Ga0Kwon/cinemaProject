@@ -33,25 +33,22 @@ ul{ list-style: none; }
 	text-align: center;
 	color:#ff0000;
 }
-
+/* 메뉴 */
+.menu1{ margin-top: 25px;}
+/*---------------본문 아이템---------------*/
 .itembox{
 	display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .item{
-	width: 15%;
+	width: 25%;
     margin: 2%;
 }
 .item img{ width: 100%; }
-.itemname{
+.name{
 	font-size: 18px;
 	margin: 5% 0%;
-}
-.badge{
-	margin-left: 5px;
-	font-size: 10px;
-	background-color: #ff0000;
 }
 /*---------------하단---------------*/
 
