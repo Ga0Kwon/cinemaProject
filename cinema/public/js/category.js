@@ -4,7 +4,7 @@
 let categoryArrays = ['드라마', '멜로/로맨스', '뮤지컬', '판타지', '액션',
  				'코미디','스릴러','모험','SF','공포','애니메이션']
 /*영화 정보를 담은 객체 배열*/				
-let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', category : ['애니메이션'], age : 12, star : 9.24},
+/*let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', category : ['애니메이션'], age : 12, star : 9.24},
 				 {name : '장화신은 고양이', img : 'PussInBoots', category : ['애니메이션'], age : 0, star : 8.41},
 				 {name : '캐리의 슈퍼콜라', img : 'CarrieAndSuperKola', category : ['애니메이션'], age : 0, star : 8.69},
 				 {name : '교섭', img : 'ThePointMan', category : ['드라마'], age : 12, star : 6.30},
@@ -14,7 +14,7 @@ let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', catego
 				 {name : '상견니', img : 'SomedayOrOneDay', category : ['드라마','판타지','멜로/로맨스'], age : 15, star : 7.83},
 				 {name : '영웅', img : 'Hero', category : ['드라마','뮤지컬'], age : 12, star : 8.41},
 				 {name : '오늘밤, 세계에서 이 사랑이 사라진다해도', img : 'EvenIfThisLoveDissappear', category : ['멜로/로맨스'], age : 12, star : 7.99},
-				 {name : '유량의 달', img : 'wandering', category : ['드라마'], age : 15, star : 7.47}]
+				 {name : '유량의 달', img : 'wandering', category : ['드라마'], age : 15, star : 7.47}]*/
 	 
 /*------------------------js실행할때 실행시켜야하는 함수 start-------------------------*/
 

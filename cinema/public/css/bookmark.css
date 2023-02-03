@@ -1,5 +1,13 @@
 @charset "UTF-8";
 /*----------------------------전체 요소 start---------------------------*/
+/*외부 폰트*/
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /*즐겨찾기 페이지 전체*/
 .bookmark_wrap{
 	margin: 0 auto; /*가운데 정렬*/
@@ -15,58 +23,39 @@ a{
 	text-decoration: none; /*밑줄제거*/
 	color :white !important;
 }
-/*----------------------------전체 요소 end----------------------------*/
-/*헤더 전체[공통]*/
+/*--------------------------헤더 start ---------------------------------*/
 .header{
-	position: relative;
+	width : 100%;
+	border: 1px white solid;
+	height: 200px;
 }
-/*----------------------------위쪽 헤더 start--------------------------*/
-.up_header{
-	width: 100%
+/*----------------------------헤더 end ---------------------------------*/
+/*--------------------------본문 start ---------------------------------*/
+.container{
+	border: 1px red solid;
 }
-/*위쪽 헤더 전체 부분*/
-.content{
-	padding :20px 6px 15px 5px;
-	margin: 0 auto;
-	width: 80%;
-	display: flex; /*가로 배치*/
-	justify-content: space-between;
+/*----------------------------본문 end ---------------------------------*/
+/*h3 스타일 지정*/
+.bookmark_title{
+	font-family: KorailRoundGothicBold;
+	border-bottom: #eeeeee solid 1px;
+	padding: 5px 0px;
+}
+/*table 요소 style 지정 start*/
+.t_dMovieTitle, .t_dMovieAudience{
+	--bs-table-hover-color : rgb(255, 40, 40); /*해당 행에 마우스를 올렸을 때 폰트 색을 red계열로 바꿈*/
+	font-size: 23px;
+	vertical-align: middle; /*세로 가운데 정렬*/
 }
 
-/*logo 이미지 */
-.content img{
-	margin-top : 5px;
-	width : 50%
+.t_dMovieBookMark{
+	--bs-table-hover-color : white; /*별은 해당 행마우스 올렸을 때 색을 바꾸지 않기 위해 white로 지정*/
+	font-size: 50px;
+	vertical-align: middle; /*세로 가운데 정렬*/
+	text-align: center;
+	padding-bottom: 28px !important;
 }
-.nav-item{
-	margin-top : 10px;
+.selectBookMark{
+	color : yellow !important;
 }
-
-.nav-item a{
-	padding : 16px;
-	display: block;
-}
-/*위쪽 헤더의 마이페이지, 로그아웃, 고객센터 부분*/
-.memberInfo{
-	display: flex; /*가로 정렬*/
-	flex-direction: row; /*가로배치*/
-}
-.nav-item a img{
-	width: 36px; height: 36px;
-}
-.nav-item a span{
-	white-space: nowrap;
-	font-size: 14px;
-}
-/*----------------------------위쪽 헤더 end----------------------------*/
-.down_header{
-	width: 100%;
-	margin : 0 auto;
-	border-top: 1px white solid;
-	padding: 1px 0;
-	font-size: 21px;
-	border-bottom: 2px red solid;
-}
-.navbar-nav li{
-	margin-right: 30px;
-}
+/*table 요소 style 지정 end*/
