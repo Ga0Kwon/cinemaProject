@@ -14,6 +14,7 @@ a{
 	text-decoration: none;
 	color: #ffffff !important;
 }
+
 ul{ list-style: none; }
 
 /*---------------헤더 메뉴---------------*/
@@ -23,6 +24,7 @@ ul{ list-style: none; }
 	width: 100%;
 	font-size: 15px;
 }
+
 .movelink{ font-size: 15px; }
 /*---------------로고---------------*/
 .logo{
@@ -31,7 +33,7 @@ ul{ list-style: none; }
 	text-align: center;
 	color:#ff0000;
 }
-/*---------------메인 아이템---------------*/
+
 .itembox{
 	display: flex;
     flex-wrap: wrap;
@@ -58,32 +60,12 @@ ul{ list-style: none; }
 	flex-direction: column;
 	align-items: center;
 }
-.footlogo{
-	color: #ff0080;
-	font-size: 30px;
-	padding: 15px 0px;
-}
-.footnav ul{
-	display: flex;
-}
 .footnav li{ 
 	margin: 0px 15px;
 	color: #505050;
 	font-size: 12px;
 	padding: 15px 0px;
 }
-/*---------------반응형---------------*/
-@media(max-width: 500px){
-	.bannerimg , .search{ display: none; }
-	.item{ width: 45%; margin: 2%; }
-	.logo h1{ font-size: 50px; }
-	.footer{ padding: 5px 0px; }
-	.footbox{ padding: 20px 0px; }
-	.footer h1{ font-size: 15px; }
-	.footnav{ display: none; }
-	.navbar-toggler-icon{ width: 40px; height: 30px; }
-} 
-
 
 
 
