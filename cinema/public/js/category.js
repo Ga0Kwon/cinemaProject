@@ -129,18 +129,6 @@ function printMovie(index){
 	}
 	document.querySelector('.content').innerHTML = html;
 }
-/* 영화 관람 영령에 따라 관람가부분 백그라운드 바꿀 수 있도록 */
-function movieAgeColor(index){
-	if(movieInfo[index].age == 0){ //전체 관람가(0)이면 
-		return "#01A40A";
-	}else if(movieInfo[index].age > 0 && movieInfo[index].age <= 12){ //나이가 1세 이상 12세 이하면
-		return "#005BD4";
-	}else if(movieInfo[index].age > 12 && movieInfo[index].age <= 18){ //나이가 13세 이상 15세 이하면
-		return "#FF6B00";
-	}else if(movieInfo[index].age >= 19){ //청불 영화일경우(19세 이상)
-		return "#BD0027";
-	}
-}
 
 /*text input을 통해 영화를 검색하려는 경우에 출력해주는 함수. */
 function printInputNameMovie(findMovieName){

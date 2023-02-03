@@ -44,20 +44,21 @@ a{
 td{
 	cursor :pointer;
 }
-/*table 요소 style 지정 start*/
-.t_dMovieTitle, .t_dMovieAudience{
-	--bs-table-hover-color : rgb(255, 40, 40); /*해당 행에 마우스를 올렸을 때 폰트 색을 red계열로 바꿈*/
+/* table 요소 style 지정 start */
+.t_dMovieTitle, .t_dMovieCategory{
+	--bs-table-hover-color : rgb(255, 40, 40); /* 해당 행에 마우스를 올렸을 때 폰트 색을 red계열로 바꿈 */
 	font-size: 21px;
-	vertical-align: middle; /*세로 가운데 정렬*/
+	vertical-align: middle;/*  세로 가운데 정렬 */
 }
 
 .t_dMovieBookMark{
-	--bs-table-hover-color : white; /*별은 해당 행마우스 올렸을 때 색을 바꾸지 않기 위해 white로 지정*/
+	--bs-table-hover-color : white; /* 별은 해당 행마우스 올렸을 때 색을 바꾸지 않기 위해 white로 지정 */
 	font-size: 50px;
-	vertical-align: middle; /*세로 가운데 정렬*/
+	vertical-align: middle; /* 세로 가운데 정렬 */
 	align-items : center;
 	padding-bottom: 28px !important;
 }
+
 .t_dMovieBookMark div{
 	width : 60px;
 	height : 60px;
@@ -67,5 +68,20 @@ td{
 	background-color:  rgb(255, 40, 40);
 	color : white;
 	padding-top : 5px;
+} 
+
+.movie_imgInfo{
+	position: relative;
+	text-align: center;
+}
+.movie_imgInfo img{
+	width : 95%;
+}
+
+.movie_age{
+	position : absolute;
+	left: 2.8%;
+	top: 0;
+	padding : 7px;
 }
 /*table 요소 style 지정 end*/
