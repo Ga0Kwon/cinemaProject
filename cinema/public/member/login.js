@@ -2,12 +2,12 @@ console.log('js 작동 확인')
 
 /* 아이디, 비밀번호 배열 선언*/
 
-let userArray = [ 
-				{ id: 'qwe123' , pw: 'qwe123'} ,
-				{ id: 'asd123' , pw: 'asd123'} ,
-				{ id: 'zxc123' , pw: 'zxc123'} ,
-				{ id: 'movie' , pw: 'movie'} ,
-				{ id: 'actor' , pw: 'actor'} ,
+let userArray = [
+				{ id: 'qwe123' , pw: 'qwe123' , email: 'qwe123@naver.com'} ,
+				{ id: 'asd123' , pw: 'asd123' , email: 'qwe123@naver.com'} ,
+				{ id: 'zxc123' , pw: 'zxc123' , email: 'qwe123@naver.com'} ,
+				{ id: 'movie' , pw: 'movie' , email: 'qwe123@naver.com'} ,
+				{ id: 'actor' , pw: 'actor' , email: 'qwe123@naver.com'} ,
 			]
 
 

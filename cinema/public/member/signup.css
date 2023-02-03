@@ -57,7 +57,7 @@ a { color: white !important; text-decoration: none !important; }
 
 /* null 값 텍스트 */
 .id_null, .pw_null, .pwcheck_null, .name_null,
-.mw_null
+.mw_null, .email_null, .email_null2
 { color:red; font-size: 7px; display: none; }
 
 /* 회원가입 페이지 배경 */
