@@ -1,5 +1,5 @@
 *{padding:0px; margin:0px; }
-.wrap{background-color:rgba(0,0,0,0.5);
+.wrap{
 	overflow:scroll;  position:fixed; 
 	top:0; left:10%; 
 	width:70%; height:100%;
@@ -21,45 +21,45 @@
 
 /* 상단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 .top_movie_information, .midder_information, .footer_information
-{padding:2% 5%; display:flex; background-color:white; 
-justify-content: space-between; width:100%; border-bottom:2px solid black;}
+{padding:2% 5%; display:flex; background-color:#141414; 
+justify-content: space-between; width:100%; border-bottom:2px solid gray;}
 
 .top_summary{display: flex; justify-content: space-between; 
 			padding:3% 5%; flex-direction: column; }
 
 /* 개요,감독,출연,등급,흥행 */
-.top_introduce{width:100%; padding:1% 0%; border-bottom:1px solid #F0F0F0;}
+.top_introduce{width:100%; padding:1% 0%; border-bottom:1px solid gray;}
 
 /*  제목2개  */
-.t_title{border-bottom:1px solid #F0F0F0; padding-bottom:10px;}
+.t_title{border-bottom:1px solid gray; padding-bottom:10px;}
 
-.title{font-weight: bold;  color:black;}
+.title{font-weight: bold;  color:white;}
 /* 영문제목 */
 .e_title{ font-size:12px; color:gray;}
 
 
 /* 별점 */
-.rating{padding:3% 0%; border-bottom:1px solid #F0F0F0; 
+.rating{padding:3% 0%; border-bottom:1px solid gray;;
 		font-size:20px; font-weight: bold; 
 		display:flex; flex-direction: column;}
-.viewer{width:40%;  color:black;}
+.viewer{width:40%;  color:white;}
 .score{display:flex;}
 
 .star{width:100px; background-position: top; }
 .star, .right-star{  background:url("../movies_DB/img/별점.png")no-repeat; 
 width:100px; height: 18px; display:inline-block;
  margin:5px 0px 0px 5px;}
-.right-star{background-position:left bottom; margin:0px;  vertical-align:top; }		
+.right-star{background-position:left bottom; margin:0px;  vertical-align:top; margin-top:2px;  }		
 
 
 /* 개요,감독,출현,등급,흥행 */
 .summary{ font-size:14px; padding:2px 0px; text-align: left; }
 
 /* 요약 서브제목 */
-.sub_title{font-weight: bold; font-size:16px; padding-right:5px;  color:black;}
+.sub_title{font-weight: bold; font-size:16px; padding-right:5px;  color:white;}
 
 /* 요약 설명 */
-.capsule{padding:2px;  color:black;}
+.capsule{padding:2px;  color:white;}
 
 /* 이미지 */
 .movie_img{width:25%; padding-right:3%;}
@@ -70,19 +70,19 @@ width:100px; height: 18px; display:inline-block;
 .information{width:50%; }
 
 /* 영화 탭 */
-.movie_tap{list-style: none; border-top:2px solid black; padding-left:0px; 
+.movie_tap{list-style: none; border-top:1px solid gray; padding-left:0px; 
 border-bottom:1px solid gray;}
-.movie_tap li{display:inline-block; cursor:pointer;  color:black;
+.movie_tap li{display:inline-block; cursor:pointer;  color:white;
 padding:10px;}
 
 
 /* 줄거리 */
-.data{ color:black; width:70%;}
+.data{ color:white; width:70%;}
 
 /*하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 .evaluate{width:100%;}
 .user{display:flex; padding:10px; }
-.user_content, .user_star, .u_star_num{color:black !important;}
+.user_content, .user_star, .u_star_num{color:white !important;}
 .user_star{width:10%;}
 .u_star_num{width:8%; vertical-align: top; text-align: center;}
 .user_content{width:80%;}
@@ -90,7 +90,7 @@ padding:10px;}
 .u_star{width:100px; background-position: top;}
 .u_star, .u_right_star{ height:18px; display:inline-block;
 background-image: url("../movies_DB/img/별점.png");background-repeat: no-repeat;}
-.u_right_star{background-position:left bottom; vertical-align:top; margin-left:1px;}
+.u_right_star{background-position:left bottom; vertical-align:top; margin-left:1px;  margin-top:2px; }
 .u_star_num{font-size:13px; font-weight: bold;}
 .user_content{font-size:13px;}
 
