@@ -19,8 +19,10 @@ function poster_print(){
 	posterList.forEach( (o,i) => {
 		html += `<div class="item">
 					 <img src="img/mainimg/${o.img}" onclick="introduce(${i})">
+
+					<a href="#"><img src="img/mainimg/${ o.img }"></a>
 					<div class="posterinfo">
-						<div class="postertitle">${ o.title }<span class="badge rounded-pill grage">${ o.grade }</span></div>
+						<div class="itemname">${ o.title }<span class="badge rounded-pill grage">${ o.grade }</span></div>
 					</div>
 				</div>`
 	})

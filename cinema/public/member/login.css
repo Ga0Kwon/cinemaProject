@@ -18,7 +18,7 @@
 a { color: black !important; text-decoration: none !important; }
 
 /* 헤더 부분*/
-.main{padding-bottom: 60px;}
+.main{padding-bottom: 80px; border: 1px solid red;}
 
 .wrap{ background-color: #eeeeee;}
 /*------------------------------로그인 페이지 시작----------*/
