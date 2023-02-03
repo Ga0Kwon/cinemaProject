@@ -11,15 +11,15 @@
 	color : white;
 }
 body{
-	background-color: #575757;
+	background-color: #2C2C2C;
 }
 /* 페이지 내용이 들어갈 전체 화면 */
 .category_wrap{
 	margin: 0 auto;
 }
 /*  실질적인 내용이 들어갈 부분 */
-.container{
-	background-color: #2B2B2B;
+.content_container{
+	background-color: rgb(55, 55, 55);
 	border-radius: 1%; 
 }
 
