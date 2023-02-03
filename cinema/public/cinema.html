@@ -24,7 +24,7 @@
 		
 		<!-- 상단 네비게이션 -->
 		<!-- ( 오른쪽 상단 : 로그인, 회원가입, 마이페이지, 즐겨찾기 ) -->
-		<div class="navbar navbar-expand-lg">
+		<div class="navbar navbar-expand-lg my-2">
 			<div class="container">
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav movelink">
@@ -33,9 +33,6 @@
 						<li class="nav-item"><a class="nav-link" href="https://www.megabox.co.kr/">메가박스</a></li>
 					</ul>
 				</div>
-			</div>
-			<!-- ( 왼쪾 상단 : 링크 ) -->
-			<div class="container">
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav topmenu">
 						<li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
@@ -48,9 +45,7 @@
 		</div>
 		
 		<!-- 로고 -->
-		<div class="logo">
-			<h1>CINEMA</h1>
-		</div>
+		<div class="logo">CINEMA</div>
 		
 	</div>
 	
@@ -58,7 +53,7 @@
 	<!-- 메인 배너 (캐러셀) 슬라이드 -->
 	<div class="slide">
 	
-		<div id="carouselExampleIndicators" class="carousel slide bannerimg" data-bs-ride="true">
+		<div id="carouselExampleIndicators" class="carousel slide bannerimg" data-bs-ride="true" data-bs-interval="2000">
 		
 			<!-- 하단 페이지수 버튼 -->
 		  <div class="carousel-indicators">
@@ -106,9 +101,9 @@
 			      <span class="navbar-toggler-icon"></span>
 			    </button>
 			    
-			    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			    <div class="collapse navbar-collapse my-3" id="navbarTogglerDemo01">
 			      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			        <li class="nav-item"><a class="nav-link active" href="#">박스오피스</a></li>
+			        <li class="nav-item" style="border-bottom: 2px solid #ff0000;"><a class="nav-link active" href="#">박스오피스</a></li>
 			        <li class="nav-item"><a class="nav-link" href="#">추천영화</a></li>
 			        <li class="nav-item"><a class="nav-link"  href="#">인기영화</a></li>
 			        <li class="nav-item"><a class="nav-link"  href="#">개봉예정영화</a></li>
@@ -117,7 +112,7 @@
 			      <!-- 검색 -->
 			      <form class="d-flex" role="search">
 			        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-			        <button class="btn btn-outline-success" style="background-color: red; color: #ffffff; border: none;" type="submit"><i class="fas fa-search"></i></button>
+			        <button class="btn btn-outline-success" style="background-color: #ff0080; color: #ffffff; border: none;" type="submit"><i class="fas fa-search"></i></button>
 			      </form>
 			    </div>
 			    
@@ -132,15 +127,14 @@
 		
 	</div>
 	
+	
 	<!-- 하단 -->
-	<div class="footer">
+	<div class="footer" style="background-color: black; padding: 25px 0px;">
 	
 		<div class="footbox">
-			<div class="foothead">
-				<h1 style="color: #ff0080; font-size: 30px">CINEMA</h1>
-			</div>
+			<div class="footlogo">CINEMA</div>
 			<div class="footnav">
-				<ul style="display: flex; font-size: 15px;">
+				<ul style="padding: 0px; margin: 0px; text-align: center;">
 					<li>회사소개</li>
 					<li>이용약관</li>
 					<li>개인정보처리방침</li>

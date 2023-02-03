@@ -20,7 +20,7 @@ function poster_print(){
 		html += `<div class="item">
 					<a href="#"><img src="img/mainimg/${ o.img }"></a>
 					<div class="posterinfo">
-						<div class="postertitle">${ o.title }<span class="badge rounded-pill grage">${ o.grade }</span></div>
+						<div class="itemname">${ o.title }<span class="badge rounded-pill grage">${ o.grade }</span></div>
 					</div>
 				</div>`
 	})

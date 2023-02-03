@@ -11,12 +11,11 @@
 	font-family: 'LINESeedKR-Bd';
 }
 a{
-	text-decoration: none !important;
+	text-decoration: none;
 	color: #ffffff !important;
 }
-ul{
-	list-style: none;
-}
+ul{ list-style: none; }
+
 /*---------------헤더 메뉴---------------*/
 .topmenu{
 	display: flex;
@@ -24,19 +23,15 @@ ul{
 	width: 100%;
 	font-size: 15px;
 }
-/*---------------링크 이동---------------*/
-.movelink{
-	font-size: 15px;
-}
+.movelink{ font-size: 15px; }
 /*---------------로고---------------*/
-.logo h1{
+.logo{
 	font-family: 'LINESeedKR-Bd';
 	font-size: 80px;
-	color: #ff0000;
 	text-align: center;
-	padding: 10px 0px;
+	color:#ff0000;
 }
-/*---------------포스터---------------*/
+/*---------------메인 아이템---------------*/
 .itembox{
 	display: flex;
     flex-wrap: wrap;
@@ -47,7 +42,7 @@ ul{
     margin: 2%;
 }
 .item img{ width: 100%; }
-.postertitle{
+.itemname{
 	font-size: 18px;
 	margin: 5% 0%;
 }
@@ -57,48 +52,36 @@ ul{
 	background-color: #ff0000;
 }
 /*---------------하단---------------*/
-.footer{
-	background-color: black;
-	font-size: 15px;
-	padding: 60px 0px;
-}
+
 .footbox{
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
 	align-items: center;
+}
+.footlogo{
+	color: #ff0080;
+	font-size: 30px;
+	padding: 15px 0px;
+}
+.footnav ul{
+	display: flex;
 }
 .footnav li{ 
 	margin: 0px 15px;
 	color: #505050;
+	font-size: 12px;
+	padding: 15px 0px;
 }
 /*---------------반응형---------------*/
 @media(max-width: 500px){
-	.bannerimg , .search{
-		display: none;
-	}
-	.item{
-		width: 45%;
-		margin: 2%;
-	}
-	.logo h1{
-		font-size: 50px;
-	}
-	.footer{
-		padding: 5px 0px;
-	}
-	.footbox{
-		padding: 20px 0px;
-	}
-	.footer h1{
-		font-size: 15px;
-	}
-	.footnav{
-		display: none;
-	}
-	.navbar-toggler-icon{
-		width: 40px;
-		height: 30px;
-	}
+	.bannerimg , .search{ display: none; }
+	.item{ width: 45%; margin: 2%; }
+	.logo h1{ font-size: 50px; }
+	.footer{ padding: 5px 0px; }
+	.footbox{ padding: 20px 0px; }
+	.footer h1{ font-size: 15px; }
+	.footnav{ display: none; }
+	.navbar-toggler-icon{ width: 40px; height: 30px; }
 } 
 
 
