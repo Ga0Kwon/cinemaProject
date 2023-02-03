@@ -70,7 +70,7 @@ let movies = [
 	 Actor:['가가연','허광한','시백우'],
 	 director:'황천인', grade:'15세 관람가', 
 	 total_viewers:86454 , img:'상견니.jpg',
-	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/SA2-nvS_Vlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/x5VeuRo4JDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 	  ,story:`드라마 스토리를 영화 버전으로 확장시킨<br/>
 멀티버스 판타지 로맨스<br/>
 완전히 새로운 세계관, 완전히 새로운 스토리의 <상견니><br/>
@@ -98,7 +98,20 @@ let movies = [
 	 Actor:['앨리슨 윌리암스','바이올렛 맥그로우'],
 	 director:'제라드 존스톤', grade:'15세 관람가', 
 	 total_viewers:60835 , img:'메간.jpg',
-	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/G066QXvMVjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'},
+	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/G066QXvMVjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+	 story:`너의 영원한 친구가 되어줄게<br/>
+교통사고로 부모를 잃고 혼자가 된 소녀 ‘케이디’.<br/>
+ 로봇 엔지니어이자, ‘케이디’의 보호자가 된 ‘젬마’는<br/>
+ ‘케이디’를 안전하게 지켜야 하는 프로그램이 입력된 AI 로봇 ‘메간’을 선물한다.<br/>
+ <br/>
+ 메간은 언제나 ‘케이디’의 곁을 지켜주며<br/>
+ 함께 웃고, 힘들 땐 위로해주는 둘도 없는 친구가 된다.<br/>
+ <br/>
+ 어느 날, ‘케이디’가 위험에 처하자<br/>
+ ‘메간’은 예측할 수 없는 방향으로 업그레이드되며<br/>
+ 감당할 수 없는 일들이 벌어지는데…<br/>
+ <br/>
+ 우정에 OFF는 없어. 영원히<br/>`},
 	 
 	   {title: '영웅', e_title:'Hero',
 	 viewers:8.42, netizen:9.00, play:120, release:'2022.12.21',
@@ -171,17 +184,14 @@ let movies = [
 	 total_viewers:70789 , img:'캐리와 슈퍼콜라.jpg',
 	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/lWkGTKzfPh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 	  ,story:`내 친구 ‘콜라’에게 초능력이 생겼다…?!<br/>
-우주 악당 ‘스펙터’에게 쫓기던 외계인 ‘마스터’는<br/>
- 우연히 지구에 불시착하게 되고<br/>
+우주 악당 ‘스펙터’에게 쫓기던 외계인 ‘마스터’는 우연히 지구에 불시착하게 되고<br/>
  <br/>
  ‘캐리’의 가장 소중한 인형 ‘콜라’의 몸 속에 들어가게 된다<br/>
  그렇게 처음 ‘슈퍼콜라’와 만나게 된 11살 캐리와 친구들!<br/>
  <br/>
- 자유자재로 사물을 움직일 수 있는 초능력 덕분에<br/>
- ‘캐리’의 하나뿐인 비밀친구가 된 ‘슈퍼 콜라’!<br/>
+ 자유자재로 사물을 움직일 수 있는 초능력 덕분에 ‘캐리’의 하나뿐인 비밀친구가 된 ‘슈퍼 콜라’!<br/>
  <br/>
- 그러나 평온함도 잠시. 무리한 초능력 사용으로<br/>
- ‘스펙터’ 일당의 레이더에 걸린 ‘슈퍼콜라’는<br/>
+ 그러나 평온함도 잠시. 무리한 초능력 사용으로 ‘스펙터’ 일당의 레이더에 걸린 ‘슈퍼콜라’는 <br/>
  결국 악당의 우주선으로 잡혀가고 마는데!<br/>
  <br/>
  용감무쌍 캐리의 슈퍼파워 콜라 구출 대작전!<br/>`

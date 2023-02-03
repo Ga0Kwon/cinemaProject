@@ -61,11 +61,6 @@ ul{ list-style: none; }
 	flex-direction: column;
 	align-items: center;
 }
-.footlogo{
-	color: #ff0080;
-	font-size: 30px;
-	padding: 15px 0px;
-}
 .footnav ul{
 	display: flex;
 }

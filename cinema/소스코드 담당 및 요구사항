@@ -16,7 +16,7 @@
    		
    4. 메인페이지 영화 클릭시 -> 간략한 영화소개(평점, 예고편)      이경석
 		movies_DB 폴더에 있는 img, info.js, movies.js
-		review폴더에 있는 review.html review.css review.js
+		review폴더에 있는 review.html, review.css, review.js
 		
 		
 	2/3일(금) - 중간 점검, 합본(2명, 1명 서브)

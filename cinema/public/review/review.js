@@ -1,18 +1,12 @@
 //포스터에 클릭한 영화 배열 확인용
 let Num = 0; 
 
-//영화 포스터
-post();
-function post(){
-	let post = '';
-	 movies.forEach((obj,idx)=>{
-		 post += `<img src="../movies_DB/img/${obj.img}" onclick="introduce(${idx})">`
-	 })
-	 document.querySelector('.post').innerHTML = post
-}
+//닫기버튼
+document.querySelector('.close').addEventListener('click',(e)=>{
+	document.querySelector('.wrap').style.display="none"
+})
 
 //영화의 상세내용 출력문
-
 function introduce( N ){
 	Num = N;
 	document.querySelector('.wrap').style.display="block"
@@ -81,7 +75,7 @@ function introduce( N ){
 							
 	document.querySelector('.top_introduce').innerHTML = details;
 	
-	let movie_img = `<img src="../movies_DB/img/${movies[N].img}">` 
+	let movie_img = `<img src="movies_DB/img/${movies[N].img}">` 
 	
 	document.querySelector('.movie_img').innerHTML = movie_img;
 	
@@ -104,14 +98,23 @@ function info( tap ){
 }
 
 //하단 유저 리뷰
-function evaluate_print( N ){
+function evaluate_print( idx ){
 	let eva ='';
-	evaluate[`${N}`].forEach((o)=>{
-		eva += `<div class="user_star">${o.user_1.netizen}</div>
-				<div class="user_star">${o.user_1.comment}</div>	`
 	
+	evaluate[idx].user.forEach((o)=>{
+		
+		eva += `<div class="user">
+				  <div class="user_star"> 
+					  <div class="u_star">
+							<span class="u_right_star" style="width:${o.netizen*10}%"></span>
+					  </div>
+				  </div>
+				  <div class="u_star_num"> ${o.netizen} </div> 
+				  <div class="user_content"> ${o.comment} </div>
+				</div>`
+					
+
 	})
-	
 	
 	document.querySelector('.evaluate').innerHTML = eva;
 }
