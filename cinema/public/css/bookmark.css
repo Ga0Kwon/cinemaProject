@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*----------------------------전체 요소 start---------------------------*/
+/*외부 폰트*/
+@font-face {
+    font-family: 'KorailRoundGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*즐겨찾기 페이지 전체*/
+.bookmark_wrap{
+	margin: 0 auto; /*가운데 정렬*/
+}
+
+*{
+	color : white;
+	background-color: #2c2c2c;
+	margin: 0px;
+	padding : 0px;
+}
+a{
+	text-decoration: none; /*밑줄제거*/
+	color :white !important;
+}
+/*--------------------------헤더 start ---------------------------------*/
+.header{
+	width : 100%;
+	border: 1px white solid;
+	height: 200px;
+}
+/*----------------------------헤더 end ---------------------------------*/
+/*--------------------------본문 start ---------------------------------*/
+.container{
+	border: 1px red solid;
+}
+/*----------------------------본문 end ---------------------------------*/
+/*h3 스타일 지정*/
+.bookmark_title{
+	font-family: KorailRoundGothicBold;
+	border-bottom: #eeeeee solid 1px;
+	padding: 5px 0px;
+}
+td{
+	cursor :pointer;
+}
+/* table 요소 style 지정 start */
+.t_dMovieTitle, .t_dMovieCategory{
+	--bs-table-hover-color : rgb(255, 40, 40); /* 해당 행에 마우스를 올렸을 때 폰트 색을 red계열로 바꿈 */
+	font-size: 21px;
+	vertical-align: middle;/*  세로 가운데 정렬 */
+}
+
+.t_dMovieBookMark{
+	--bs-table-hover-color : white; /* 별은 해당 행마우스 올렸을 때 색을 바꾸지 않기 위해 white로 지정 */
+	font-size: 50px;
+	vertical-align: middle; /* 세로 가운데 정렬 */
+	align-items : center;
+	padding-bottom: 28px !important;
+}
+
+.t_dMovieBookMark div{
+	width : 60px;
+	height : 60px;
+	line-height : 60px;
+	text-align : center;
+	font-family: KorailRoundGothicBold;
+	background-color:  rgb(255, 40, 40);
+	color : white;
+	padding-top : 5px;
+} 
+
+.movie_imgInfo{
+	position: relative;
+	text-align: center;
+}
+.movie_imgInfo img{
+	width : 95%;
+}
+
+.movie_age{
+	position : absolute;
+	left: 2.8%;
+	top: 0;
+	padding : 7px;
+}
+/*table 요소 style 지정 end*/
