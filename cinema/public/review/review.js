@@ -1,10 +1,12 @@
 //포스터에 클릭한 영화 배열 확인용
 let Num = 0; 
 
-//영화 포스터
+//닫기버튼
+document.querySelector('.close').addEventListener('click',(e)=>{
+	document.querySelector('.wrap').style.display="none"
+})
 
 //영화의 상세내용 출력문
-
 function introduce( N ){
 	Num = N;
 	document.querySelector('.wrap').style.display="block"

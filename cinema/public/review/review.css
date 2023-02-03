@@ -1,14 +1,23 @@
 *{padding:0px; margin:0px; }
 .wrap{background-color:rgba(0,0,0,0.5);
-	 overflow:scroll;  position:fixed; 
+	overflow:scroll;  position:fixed; 
 	top:0; left:10%; 
-	width:80%; height:100%;
+	width:70%; height:100%;
 	display:flex; flex-direction: column;
 	justify-content: center;align-items: center;
 	z-index:1030; 
 	/* 초기 */
-	display:none;}
+	display:none;
+	
 
+	}
+
+/*스크롤바 없애는 기능  */
+.wrap::-webkit-scrollbar {display: none;}
+
+/* 닫기  */
+.close{width:80px; height:80px;background-color: white;
+	   position: fixed; top:10%; right:15%;}
 
 /* 상단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 .top_movie_information, .midder_information, .footer_information
@@ -58,7 +67,7 @@ width:100px; height: 18px; display:inline-block;
 
 /* 중단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* 중단정보창 */
-.informatioin{width:100%; }
+.information{width:50%; }
 
 /* 영화 탭 */
 .movie_tap{list-style: none; border-top:2px solid black; padding-left:0px; 
@@ -68,19 +77,20 @@ padding:10px;}
 
 
 /* 줄거리 */
-.data{ color:black;}
+.data{ color:black; width:70%;}
 
 /*하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+.evaluate{width:100%;}
 .user{display:flex; padding:10px; }
 .user_content, .user_star, .u_star_num{color:black !important;}
-.user_star{width:15%;}
-.u_star_num{width:5%; vertical-align: top;}
+.user_star{width:10%;}
+.u_star_num{width:8%; vertical-align: top; text-align: center;}
 .user_content{width:80%;}
 
 .u_star{width:100px; background-position: top;}
 .u_star, .u_right_star{ height:18px; display:inline-block;
 background-image: url("../movies_DB/img/별점.png");background-repeat: no-repeat;}
 .u_right_star{background-position:left bottom; vertical-align:top; margin-left:1px;}
-.u_star_num{font-size:13px; font-weight: bold}
+.u_star_num{font-size:13px; font-weight: bold;}
 .user_content{font-size:13px;}
 
