@@ -29,7 +29,7 @@ a { color: black !important; text-decoration: none !important; }
 /* 회원가입 페이지 배경 */
 .wrap{ 
 	background-color: #eeeeee;
-	width: 600px; height: 680px;
+	width: 600px; height: 700px;
 	margin: 0 auto;
 	padding-top: 2%;
 }
@@ -48,6 +48,14 @@ a { color: black !important; text-decoration: none !important; }
 	margin: 0 auto;	
 }
 
+/* id 중복시 입력 텍스트*/
+#id_error{
+	
+	color: red;
+	font-size: 7px;
+	display: none;
+}
+
 /* 회원가입 텍스트 */
 .text{
 	width: 200px; height: 60px;
@@ -55,14 +63,16 @@ a { color: black !important; text-decoration: none !important; }
 	padding: 30px 0px 50px 0px;
 }
 
+.text span{
+	margin-top: 5px;
+}
+
+
 /* 회원가입 input box */
 .text input{
 	border: 1px solid #eeeeee;
 	border-radius: 10px;
-	margin-top: 5px;
 }	
-
-/* 생년월일 */
 
 
 
