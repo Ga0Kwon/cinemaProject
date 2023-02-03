@@ -121,6 +121,11 @@ a { color: black !important; text-decoration: none !important; }
 	padding-top: 40%;
 }
 
+.modal_btn button{
+	border: 1px solid #FBF2EF; border-radius: 8px;
+	color: #F6CEE3
+}
+
 
 
 
