@@ -41,10 +41,13 @@ a{
 	border-bottom: #eeeeee solid 1px;
 	padding: 5px 0px;
 }
+td{
+	cursor :pointer;
+}
 /*table 요소 style 지정 start*/
 .t_dMovieTitle, .t_dMovieAudience{
 	--bs-table-hover-color : rgb(255, 40, 40); /*해당 행에 마우스를 올렸을 때 폰트 색을 red계열로 바꿈*/
-	font-size: 23px;
+	font-size: 21px;
 	vertical-align: middle; /*세로 가운데 정렬*/
 }
 
@@ -52,10 +55,17 @@ a{
 	--bs-table-hover-color : white; /*별은 해당 행마우스 올렸을 때 색을 바꾸지 않기 위해 white로 지정*/
 	font-size: 50px;
 	vertical-align: middle; /*세로 가운데 정렬*/
-	text-align: center;
+	align-items : center;
 	padding-bottom: 28px !important;
 }
-.selectBookMark{
-	color : yellow !important;
+.t_dMovieBookMark div{
+	width : 60px;
+	height : 60px;
+	line-height : 60px;
+	text-align : center;
+	font-family: KorailRoundGothicBold;
+	background-color:  rgb(255, 40, 40);
+	color : white;
+	padding-top : 5px;
 }
 /*table 요소 style 지정 end*/

@@ -1,7 +1,7 @@
 /*해당 사용자 정보 */
 let adminInfo = {
 	age : 20, 
-	bookmark : ['아바타', '영웅','오늘밤, 세계에서 이 사랑이 사라진다해도']
+	bookmark : ['아바타', '영웅','오늘밤, 세계에서 이 사랑이 사라진다해도','장화신은 고양이']
 }
 
 /*고객을 담는 객체 배열 */
@@ -24,15 +24,24 @@ function printBookMark(){
 								<img style = "width : 130px;" src = "../img/${movieInfo[i].img}.jpg"><!-- 북마크한 영화의 포스터 -->
 							</td>
 							<td class = "t_dMovieTitle">${movieInfo[i].name}</td> <!-- 북마크한 영화의 제목 -->
-							<td class = "t_dMovieAudience">${movieInfo[i].age}세 관람가</td><!-- 북마크한 영화의 관라가 -->
-							<td class = "t_dMovieBookMark selectBookMark">★</td><!-- 북마크 여부 및 해제 -->
+							<td class = "t_dMovieAudience">${movieInfo[i].age == 0 ? "전체 관람가" : movieInfo[i].age + "세 관람가"}</td><!-- 북마크한 영화의 관라가 -->
+							<td class = "t_dMovieBookMark"><div onClick = "deleteBookmark(${j})" >X</div></td><!-- 북마크 여부 및 해제 -->
 						</tr>`
 			}
 		}
 	}
 	document.querySelector('tbody').innerHTML = html;
 }
-/*북마크 열에 별을 클릭하면 해제 여부를 확인하고 해제해야한다 -> 일단 북마크한 것만 출력하므로 별위 색은 다 클릭되어있다. */
-document.querySelector('.selectBookMark').addEventListener('click', (e) => {
+/*북마크 열에 별을 클릭하면 해제 여부를 확인하고 해제해야한다 -> 일단 북마크한 것만 출력하므로 별위 색은 다 클릭되어있k */
+function deleteBookmark(i){
+	let selectBookMark = document.querySelectorAll('.t_dMovieBookMark');
 	
-})
+	if(confirm(adminInfo.bookmark[i] + "을/를 북마크에서 삭제하시겠습니까?")){
+		adminInfo.bookmark.splice(i, 1);
+		selectBookMark[i].classList.remove('selectBookMark');
+		console.log(adminInfo);
+		alert('삭제되었습니다.');
+	}
+	printBookMark();
+}
+
