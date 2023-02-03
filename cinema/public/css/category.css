@@ -49,8 +49,8 @@ body{
 }
 
 .categorySelect{ /*카테고리를 선택했을 때 디자인 바꿈*/
-	color: #ff5151;
-	border-bottom: 3px #ff5151 solid;
+	color: #FF0080;
+	border-bottom: 3px #FF0080 solid;
 	padding-bottom : 5px !important;
 	font-weight: bold;
 }
@@ -129,7 +129,7 @@ body{
 	right : left; /*오른쪽 윗부분에 띄우기 위해*/
 	top: left;
 	color : white;
-	background-color: red;
+	background-color: #FF0080 !important;
 	padding : 1px;
 }
 /*평점이 들어가는 전체 칸*/
@@ -149,7 +149,7 @@ body{
 	/*상위 요소에 맞춰 겹쳐야하기 때문에 left, top => 0*/
 	left : 0;
 	top : 0;
-	color : #FE222D;
+	color : #FF0080;
 	overflow: hidden; /*넘치면 숨긴다.*/
 }
 /*숫자로된 평점*/
