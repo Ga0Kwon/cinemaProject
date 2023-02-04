@@ -3,8 +3,8 @@ console.log('js 작동 확인')
 /* 아이디, 비밀번호 배열 선언*/
 
 let userArray = [
-				{ name: '유재석' , id: 'qwe123' , pw: 'qwe123' , email: 'qwe123@naver.com'} ,
-				{ name: '강호동', id: 'asd123' , pw: 'asd123' , email: 'qwe123@naver.com'} ,
+				{ name: 'q' , id: 'qwe123' , pw: 'qwe123' , email: 'q'} ,
+				{ name: 'w', id: 'asd123' , pw: 'asd123' , email: 'w'} ,
 				{ name: '신동엽', id: 'zxc123' , pw: 'zxc123' , email: 'qwe123@naver.com'} ,
 				{ name: '서장훈', id: 'movie' , pw: 'movie' , email: 'qwe123@naver.com'} ,
 				{ name: '길', id: 'actor' , pw: 'actor' , email: 'qwe123@naver.com'} ,
@@ -62,16 +62,45 @@ document.querySelector('.xbtn2').addEventListener('click', (e) => {
 
 	// 닫기 버튼 누를 시 모달 닫기
 document.querySelector('.modal_close').addEventListener('click' , (e) =>{
-document.querySelector('.modal_wrap').style.display = 'none';
-	})
+	document.querySelector('.modal_wrap').style.display = 'none';
+})
 
 	// 아이디 찾기 누를시 id 모달 열기
 document.querySelector('.idFind').addEventListener('click' , (e) =>{
 	document.querySelector('.modal_wrap').style.display = 'block';
 })
 
+	// 아이디 찾기 버튼 누를 시
+function id_find(){
+	let name = document.querySelector('.name_find').value;
+	let email = document.querySelector('.email_find').value;
+	
+	console.log(name)
+	console.log(email)
+	
+	let html = ``
 
-
+	
+	for( let i = 0 ; i < userArray.length; i++ ){
+	if(name == userArray[i].name && email == userArray[i].email){
+		console.log('됨?')
+		html += `<h3 class="modal_title"> 아이디 찾기 </h3>	<!-- 제목 -->
+				<div class="nametext">이름 <input class="name_find" type="text"> </div>
+				<div class="emailtext">이메일 <input class="email_find" type="text"> </div>
+				<div style= "display:flex;">	
+				<div class="real_idtext"> 아이디 </div> <div class="real_id"> ${userArray[i].id} </div> </div>
+				</div>
+				<div class="modal_btns">
+				<button onclick="close()" class="modal_close2">닫기</button>		<!-- 모달 닫기 버튼 -->
+				</div>`
+	}
+		
+	}
+	document.querySelector('.modal_box').innerHTML = html
+	document.querySelector('.modal_close2').addEventListener('click' , (e) =>{
+	document.querySelector('.modal_wrap').style.display = 'none';
+	})	
+}
 
 
 
