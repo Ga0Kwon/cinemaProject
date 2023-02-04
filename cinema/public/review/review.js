@@ -6,6 +6,22 @@ document.querySelector('.close').addEventListener('click',(e)=>{
 	document.querySelector('.wrap').style.display="none"
 })
 
+
+//영화 헤더 이미지
+function header_print( N ){
+	let movie_img =`<div class="header_img" style="
+					background-image: url(movies_DB/header_img/${movies[N].img})">
+					</div> `;
+	
+	
+	
+	document.querySelector('.information_header').innerHTML = movie_img
+}
+
+
+
+
+
 //영화의 상세내용 출력문
 function introduce( N ){
 	Num = N;
@@ -79,11 +95,12 @@ function introduce( N ){
 	
 	document.querySelector('.movie_img').innerHTML = movie_img;
 	
-	info('story')
-	evaluate_print(N)
+	header_print( N ) //선택한 영화 헤더 출력
+	info('story') //선택한 영화 줄거리 먼저 출력
+	evaluate_print(N) //선택한 영화 유저리뷰 출력
 }
 
-//중단 줄거리 예고편 출력
+//중단 줄거리, 예고편 출력
 function info( tap ){
 	let info ='';
 	if(tap == 'story'){

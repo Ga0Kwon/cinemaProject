@@ -4,7 +4,7 @@ let movies = [
 	 category:['애니메이션'], country:'일본',
 	 Actor:['엄상현','강수진','최낙윤'],
 	 director:'이노우에 다케히코', grade:'12세 관람가', 
-	 total_viewers:1715315, img:'슬램덩크.jpg',
+	 total_viewers:1715315, img:'슬램덩크.jpg', left:'#A49F9F',right:'#883C3F',
 	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/uJegwq2rMSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 	 ,story:'전국 제패를 꿈꾸는 북산고 농구부 5인방의 꿈과 열정, 멈추지 않는 도전을 그린 영화.'
 	 },
@@ -140,7 +140,7 @@ let movies = [
 	 category:['애니메이션'], country:'미국',
 	 Actor:['안토니오 반데라스, 셀마 헤이엑, 올리비아 콜맨'],
 	 director:'조엘 크로포드', grade:'전체 관람가', 
-	 total_viewers:717876 , img:'장화신은 고양이.jpg',
+	 total_viewers:717876 , img:'장화신은고양이.jpg',
 	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/gOQmkggSJ6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 	  ,story:`아홉 개의 목숨 중 단 하나의 목숨만 남은 장화신은 고양이.<br/>
  마지막 남은 목숨을 지키기 위해 히어로의 삶 대신 반려묘의 삶을 선택한 그에게 찾아온 마지막 기회, 바로 소원을 들어주는 소원별이 있는 곳을 알려주는 지도!<br/>
@@ -176,12 +176,12 @@ let movies = [
  두 소년, 소녀의 가장 슬픈 청춘담<br/>`
 	  },
 	 
-	    {title: '캐리와 슈퍼콜라', e_title:'CARRIE&SUPERKOLA',
+	    {title: '캐리와슈퍼콜라', e_title:'CARRIE&SUPERKOLA',
 	 viewers:8.69, netizen:9.20, play:79, release:'2023.01.18',
 	 category:['애니메이션'], country:'대한민국',
 	 Actor:['최정윤,엄성현,이다은'],
 	 director:'오성윤', grade:'전체 관람가', 
-	 total_viewers:70789 , img:'캐리와 슈퍼콜라.jpg',
+	 total_viewers:70789 , img:'캐리와슈퍼콜라.jpg',
 	 tralier:'<iframe width="560" height="315" src="https://www.youtube.com/embed/lWkGTKzfPh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
 	  ,story:`내 친구 ‘콜라’에게 초능력이 생겼다…?!<br/>
 우주 악당 ‘스펙터’에게 쫓기던 외계인 ‘마스터’는 우연히 지구에 불시착하게 되고<br/>
