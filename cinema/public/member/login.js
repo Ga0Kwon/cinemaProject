@@ -3,11 +3,11 @@ console.log('js 작동 확인')
 /* 아이디, 비밀번호 배열 선언*/
 
 let userArray = [
-				{ id: 'qwe123' , pw: 'qwe123' , email: 'qwe123@naver.com'} ,
-				{ id: 'asd123' , pw: 'asd123' , email: 'qwe123@naver.com'} ,
-				{ id: 'zxc123' , pw: 'zxc123' , email: 'qwe123@naver.com'} ,
-				{ id: 'movie' , pw: 'movie' , email: 'qwe123@naver.com'} ,
-				{ id: 'actor' , pw: 'actor' , email: 'qwe123@naver.com'} ,
+				{ name: '유재석' , id: 'qwe123' , pw: 'qwe123' , email: 'qwe123@naver.com'} ,
+				{ name: '강호동', id: 'asd123' , pw: 'asd123' , email: 'qwe123@naver.com'} ,
+				{ name: '신동엽', id: 'zxc123' , pw: 'zxc123' , email: 'qwe123@naver.com'} ,
+				{ name: '서장훈', id: 'movie' , pw: 'movie' , email: 'qwe123@naver.com'} ,
+				{ name: '길', id: 'actor' , pw: 'actor' , email: 'qwe123@naver.com'} ,
 			]
 
 
@@ -47,5 +47,39 @@ function login(){
 		}
 	}
 }
+
+	// x 버튼 누를시 광고 삭제
+document.querySelector('.xbtn').addEventListener('click', (e) => {
+	document.querySelector('.header_banner').style.display = 'none';
+})
+
+document.querySelector('.xbtn2').addEventListener('click', (e) => {
+	document.querySelector('.footer_banner').style.display = 'none';
+})
+
+	
+// 아이디 찾기 모달
+
+	// 닫기 버튼 누를 시 모달 닫기
+document.querySelector('.modal_close').addEventListener('click' , (e) =>{
+document.querySelector('.modal_wrap').style.display = 'none';
+	})
+
+	// 아이디 찾기 누를시 id 모달 열기
+document.querySelector('.idFind').addEventListener('click' , (e) =>{
+	document.querySelector('.modal_wrap').style.display = 'block';
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 

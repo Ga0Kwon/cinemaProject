@@ -156,12 +156,139 @@ a { color: white !important; text-decoration: none !important; }
 	color: red;
 }
 
-/* 로그인 페이지 광고 배너*/
-.login_banner{
-	background-color: red;
-	width: 600px; height: 100px;
+/* 헤더 위 광고 배너  */
+.banner_img{
+	background-color: black;
+}
+
+.xbtn{
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+
+.header_banner{
 	text-align: center;
 	margin: 0 auto;
+}
+
+/* 푸터 광고 배너 */
+
+.footer_img{
+	background-color: #141414;
+}
+
+.xbtn2{
+	border: 1px solid #141414;
+	background-color: #141414;
+	color: white;
+}
+
+.footer_banner{
+	text-align: center;
+	margin: 0 auto;	
+}
+
+/* 아이디 찾기 모달 */
+.modal_wrap{
+	position: fixed;	/* 위치 고정 */
+	top : 0; left: 0;	/* 시작점 */
+	/* 모든 영역 배경*/
+	width: 100%; height: 100%;
+
+	background-color: rgba( 0 , 0, 0, 0.3); /* 검정색에 50% 투명도 */
+	/* rgb( 0, 0, 0 ) : 검정색 */
+	/* rgba( 0, 0, 0, 투명도 )*/
+	z-index : 1030; /* 겹쳤을 때 우선순위*/ 	/* 헤더에 부트스트랩 .sticky-top { z-index : 1020 } */
+	
+	/* 기본 값 : 처음에 모달 숨기기 */
+	display: none;
+}
+
+/* 모달 상자 */
+.modal_box{
+	background-color: white; width: 30%; 
+	border-radius: 15px;
+	padding: 4%;
+	margin: 15% 35% 20%;
+}
+
+/* 모달 텍스트 */
+.modal_title{
+	text-align: center;
+	margin-bottom: 15%;
+	font-family: 'LINESeedKR-Bd';
+}
+
+/* 모달 이름 */
+.nametext, .emailtext{
+	text-align: center;
+}
+
+.nametext{
+	margin: 4%;
+	font-family: 'LINESeedKR-Bd';
+}
+
+.emailtext{
+	font-family: 'LINESeedKR-Bd';
+}
+
+.name_find{
+	margin-left: 35px;
+	width: 57%;
+}
+
+.email_find{
+	width: 52%;
+	margin-left: 20px;
+	margin-bottom: 5%;
+}
+
+
+/* 모달 버튼 목록 */
+.modal_btns{
+	display: flex; justify-content: flex-end;
+	margin: 5% 0%;
+}
+
+.modal_box button{
+	background-color: white;
+	padding: 5px 20px;
+	margin-left: 3%;
+	margin-top: 5%;
+	border: 1px solid #eeeeee;
 	border-radius: 10px;
 }
+
+.real_idtext, .real_id{
+	display: flex;
+	color: red;
+	margin-left: 15%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

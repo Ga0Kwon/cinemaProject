@@ -17,7 +17,11 @@
 <body>
 	<!-- 헤더 -->
 	<div class="header">
-
+	
+		<div class="header_banner">
+			<div class="banner_img"><img src="../img/광고배너1.jpg"><span><button class="xbtn">X</button></span> </div> <!-- 광고 배너 -->
+		</div>
+		
 		<!-- 상단 네비게이션 -->
 		<!-- ( 오른쪽 상단 : 로그인, 회원가입, 마이페이지, 즐겨찾기 ) -->
 		<div class="navbar navbar-expand-lg" style="padding-bottom: 0px;">
@@ -77,13 +81,13 @@
 								</div>	
 
 
-								<div>
-									<a href="#"><button type="button"> 아이디찾기  </button></a>
+								<div >
+									<button class="idFind" type="button"> 아이디찾기  </button>
 								</div>	
 
 
-								<div>
-									<a href="#"><button type="button"> 비밀번호 찾기  </button></a>
+								<div >
+									<button class="pwFind" type="button"> 비밀번호 찾기  </button>
 								</div>	
 
 						</div>
@@ -91,12 +95,29 @@
 					
 				</div> <!-- 로그인 박스 e -->
 			</div>
-
 	</div>
-			<div class="login_banner">	<!-- 배너 구역 -->
-						배너
+		<!-- 아이디 찾기 모달 박스 -->
+
+	<div class="modal_wrap">	<!-- 모달 배경 구역 -->
+		<div class="modal_box">		<!-- 모달 상자 -->
+			<h3 class="modal_title"> 아이디 찾기 </h3>	<!-- 제목 -->
+				<div class="nametext">이름 <input class="name_find" type="text"> </div>
+				<div class="emailtext">이메일 <input class="email_find" type="text"> </div>
+				
+			<div class="real_idtext"> 아이디 <div class="real_id"> asdf </div> </div>
+			
+			<div class="modal_btns">
+				<button onclick="id_find()" class="modal_find">찾기</button>		<!-- 찾기 버튼 -->
+				<button class="modal_close">닫기</button>		<!-- 모달 닫기 버튼 -->
 			</div>
+		</div>
+	</div>
+	
 </div>
+
+		<div class="footer_banner">
+			<div class="footer_img"><img src="../img/광고배너2.jpg"><span><button class="xbtn2">X</button></span> </div> <!-- 광고 배너 -->
+		</div>
 
 
 	<!-- 부트스트랩 : js -->
