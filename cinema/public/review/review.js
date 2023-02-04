@@ -7,7 +7,7 @@ document.querySelector('.close').addEventListener('click',(e)=>{
 })
 
 
-//영화 헤더 이미지
+//영화 클릭시 헤더 이미지
 function header_print( N ){
 	let movie_img =`<div class="header_img" style="
 					background-image: url(movies_DB/header_img/${movies[N].img})">
@@ -20,9 +20,7 @@ function header_print( N ){
 
 
 
-
-
-//영화의 상세내용 출력문
+//영화 클릭시 해당 영화의 상세내용 출력문
 function introduce( N ){
 	Num = N;
 	document.querySelector('.wrap').style.display="block"
@@ -144,6 +142,16 @@ const drawStar = (target) => {
 	document.querySelector(`.star_num`).innerHTML = `${target.value} 점`
 }
 
-/*최 하단 유저 리뷰등록d*/
+/*최 하단 유저 리뷰등록*/
+function comment(){
+	alert('등록되었습니다');
+
+	let netizen = Math.floor(document.querySelector('.star_btn').value);
+	let comment = `${document.querySelector('.comment').value}`;
+	
+	evaluate[Num].user.push({netizen: netizen, comment: comment});
+	evaluate_print(Num); //영화리뷰출력
+
+}
 
 
