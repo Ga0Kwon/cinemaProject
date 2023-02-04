@@ -194,11 +194,46 @@
 		</div>	<!-- 중단 -->
 	 </div>		<!-- 2container e -->
 	 
+	 
 	<div class="container"> <!-- 3container s -->
 		<div class ="footer_information">
-			<div class="evaluate"></div>	<!-- 리뷰 -->
+			<div class="fcol">	<!-- 오직 column하기위함 -->
+				<h3 class="head3"> 리뷰 </h3>
+				<div class="evaluate"></div>	<!-- 리뷰 -->
+			</div>
 		</div>
 	</div>	<!--3container e  -->
+	
+	<div class="container"> <!-- 4container s -->
+		
+		<div class ="write_review"> <!-- 유저가 리뷰쓰기 -->
+			<div class="fcol">	<!-- 오직 column하기위함 -->
+				<h3 class="head3"> 리뷰 쓰기 </h3>
+				
+				<div class="frow  w_review">	<!-- 오직 row, 리뷰전체  -->
+					<div class="write_star"> 	<!-- 별점 -->
+						<span class="w_star">
+						  ★★★★★
+						  <span>★★★★★</span>
+						  <input type="range" oninput="drawStar(this)" value="1" step="1" min="0" max="10">
+						</span>
+					</div>
+					
+					<div class="star_num"> 0점 </div>
+					
+					<div class="input-group mb-3">
+					  <input type="text" class="form-control" placeholder="리뷰를 등록하세요" aria-label="Recipient's username" aria-describedby="button-addon2">
+					  <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="comment()">등록</button>
+					</div>
+					
+				</div>		<!-- frow e -->						<!-- 별점 끝 -->
+		
+			
+		
+		</div>	<!-- fcol e -->
+	</div>	<!--3container e  -->
+	
+	
 	</div>	<!-- wrap e 이경석 끝-->
 	
 

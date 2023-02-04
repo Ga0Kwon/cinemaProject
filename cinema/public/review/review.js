@@ -114,7 +114,7 @@ function info( tap ){
 	document.querySelector('.data').innerHTML = info
 }
 
-//하단 유저 리뷰
+//하단 유저 리뷰 보기
 function evaluate_print( idx ){
 	let eva ='';
 	
@@ -135,5 +135,15 @@ function evaluate_print( idx ){
 	
 	document.querySelector('.evaluate').innerHTML = eva;
 }
+
+
+/*최 하단 유저 별점*/
+
+const drawStar = (target) => {
+	document.querySelector(`.w_star span`).style.width = `${target.value * 10}%`;
+	document.querySelector(`.star_num`).innerHTML = `${target.value} 점`
+}
+
+/*최 하단 유저 리뷰등록d*/
 
 
