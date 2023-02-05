@@ -1,3 +1,4 @@
+/*공용*/
 //포스터에 클릭한 영화 배열 확인용
 let Num = 0; 
 
@@ -5,6 +6,10 @@ let Num = 0;
 document.querySelector('.close').addEventListener('click',(e)=>{
 	document.querySelector('.wrap').style.display="none"
 })
+
+let movie_tap = ['줄거리','예고편']
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 
 
 //영화 클릭시 헤더 이미지
@@ -96,21 +101,51 @@ function introduce( N ){
 	header_print( N ) //선택한 영화 헤더 출력
 	info('story') //선택한 영화 줄거리 먼저 출력
 	evaluate_print(N) //선택한 영화 유저리뷰 출력
+	movie_Tap() // 중단 영화 탭 출력
+}
+
+
+//중단 영화탭
+function movie_Tap(){
+	let tap_category =``;
+	movie_tap.forEach((tap)=>{
+		tap_category += `<li class="tap_category"  onclick="info('${tap}')"> ${tap} </li>`
+	})
+	document.querySelector('.movie_tap').innerHTML = tap_category ;
+	
+	info('줄거리') //초기는 줄거리 출력
 }
 
 //중단 줄거리, 예고편 출력
 function info( tap ){
 	let info ='';
-	if(tap == 'story'){
+	if(tap == '줄거리'){
 		info +=`${movies[Num].story}`
-	}
+		tap_Select( tap )
+		}
 	
-	if(tap == 'tralier'){
+	
+	if(tap == '예고편'){
 		info +=`${movies[Num].tralier}`
+		tap_Select(tap)
 	}	
 	
 	document.querySelector('.data').innerHTML = info
 }
+
+
+//탭 선택시 강조
+function tap_Select( tap){
+	let tap_li = document.querySelectorAll('.tap_category')
+		movie_tap.forEach((tap_category,idx)=>{
+			if(tap_category == tap)
+			{ tap_li[idx].classList.add('tap_Select')}
+			else
+			{tap_li[idx].classList.remove('tap_Select')}
+		})
+}
+
+
 
 //하단 유저 리뷰 보기
 function evaluate_print( idx ){

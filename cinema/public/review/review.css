@@ -79,7 +79,7 @@ width:100px; height: 18px; display:inline-block;
 
 /* 중단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* 중단정보창 */
-.information{width:50%; }
+.information{width:80%; }
 
 /* 영화 탭 */
 .movie_tap{list-style: none; border-top:1px solid gray; padding-left:0px; 
@@ -89,7 +89,16 @@ padding:10px;}
 
 
 /* 줄거리 */
-.data{ color:white; width:70%;}
+.data{ color:white; width:100%;}
+
+.tap_Select{ /*카테고리를 선택했을 때 디자인 바꿈*/
+	color: black !important;
+	border-bottom: 3px #ff5151 solid;
+	padding-bottom : 5px !important;
+	font-weight: bold;
+	background-color:white;
+	
+}
 
 /*하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 /* 전체 리뷰 */
