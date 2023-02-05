@@ -93,22 +93,11 @@ function id_find(){
 				<div class="modal_btns">
 				<button onclick="close()" class="modal_close2">닫기</button>		<!-- 모달 닫기 버튼 -->
 				</div>`
-	}
-		
+		}
+
 	}
 	document.querySelector('.modal_box').innerHTML = html
 	document.querySelector('.modal_close2').addEventListener('click' , (e) =>{
 	document.querySelector('.modal_wrap').style.display = 'none';
 	})	
 }
-
-
-
-
-
-
-
-
-
-
-
