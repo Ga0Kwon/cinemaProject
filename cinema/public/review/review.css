@@ -79,7 +79,7 @@ width:100px; height: 18px; display:inline-block;
 
 /* 중단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* 중단정보창 */
-.information{width:80%; }
+.information{width:70%; }
 
 /* 영화 탭 */
 .movie_tap{list-style: none; border-top:1px solid gray; padding-left:0px; 
@@ -89,7 +89,8 @@ padding:10px;}
 
 
 /* 줄거리 */
-.data{ color:white; width:100%;}
+.data{ color:white; width:100%; 
+display:flex; flex-wrap: wrap; justify-content: space-between;}
 
 .tap_Select{ /*카테고리를 선택했을 때 디자인 바꿈*/
 	color: black !important;
@@ -99,6 +100,18 @@ padding:10px;}
 	background-color:white;
 	
 }
+
+
+/* 배우/제작진 */
+.movie_actor{display:flex; margin:20px; flex-wrap: wrap; width:45%;}
+
+/* 배우/제작진 이미지 */
+.movie_actor img{margin:10px;}
+
+/* 배우/제작진 정보 */
+.actor_info{display:flex; flex-direction: column; margin:10px;}
+
+.actor_name{margin-bottom:3px;}
 
 /*하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 /* 전체 리뷰 */

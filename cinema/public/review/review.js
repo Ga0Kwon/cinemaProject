@@ -7,7 +7,7 @@ document.querySelector('.close').addEventListener('click',(e)=>{
 	document.querySelector('.wrap').style.display="none"
 })
 
-let movie_tap = ['줄거리','예고편']
+let movie_tap = ['줄거리','예고편','배우/제작진']
 
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 
@@ -17,8 +17,6 @@ function header_print( N ){
 	let movie_img =`<div class="header_img" style="
 					background-image: url(movies_DB/header_img/${movies[N].img})">
 					</div> `;
-	
-	
 	
 	document.querySelector('.information_header').innerHTML = movie_img
 }
@@ -116,7 +114,7 @@ function movie_Tap(){
 	info('줄거리') //초기는 줄거리 출력
 }
 
-//중단 줄거리, 예고편 출력
+//중단 줄거리, 예고편, 배우 출력
 function info( tap ){
 	let info ='';
 	if(tap == '줄거리'){
@@ -130,6 +128,19 @@ function info( tap ){
 		tap_Select(tap)
 	}	
 	
+	if(tap == '배우/제작진'){
+
+		Characters[Num].actor_rol.forEach((actor)=>{
+		info += `<div class="movie_actor">
+					 <img src="movies_DB/actor_img/${actor.img}">
+					 <div class="actor_info">
+					 	<div class="actor_name">${actor.name}</div>
+					 	<div class="actor_rol">${actor.역할}</div>
+					 </div>
+				</div>`
+		})
+	tap_Select(tap)	
+	}
 	document.querySelector('.data').innerHTML = info
 }
 
