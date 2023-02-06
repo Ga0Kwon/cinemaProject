@@ -14,15 +14,63 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 /* a태그 기본값 */
-a { color: black !important; text-decoration: none !important; }
+a { color: white !important; text-decoration: none !important; }
 
-/* 헤더 부분*/
-.main{padding-bottom: 80px; border: 1px solid red;}
+/* 로그인 페이지 배경 */
+.wrap{ 	
+	background-color: #eeeeee;
+	width: 600px; height: 500px;
+	margin: 0 auto;
+	padding-top: 4%;
+	border-radius: 10px;}
 
-.wrap{ background-color: #eeeeee;}
+.all_wrap{
+	background-color: #141414;
+	padding: 5%;
+}	
+
+/*---------------헤더 메뉴---------------*/
+.header{
+	background-color: #2c2c2c;
+}
+
+.topmenu{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	font-size: 15px;
+	font-style: white;
+	font-family: 'LINESeedKR-Bd';
+}
+
+.movelink{ 
+	font-size: 15px;
+	font-family: 'LINESeedKR-Bd'; }
+
+.movelink li{
+	color: white;
+}
+	
+/*---------------로고---------------*/
+.logo{
+	font-size: 80px;
+	text-align: center;
+	color:#ff0000;
+}
+
+
 /*------------------------------로그인 페이지 시작----------*/
 
+/* 로그인 백그라운드 크기*/
 
 
 /* 로그인 타이틀 글자*/
@@ -32,19 +80,12 @@ a { color: black !important; text-decoration: none !important; }
 	padding-top: 20px;
 }
 
-/* 로고 img */
-.login_title img{
-	text-align: center;
-	width: 80px;
-	height: 40px;
-}
 
 /* 로그인 박스 */
 .login_box{
-	border: 3px dotted #5a5a5a; border-radius: 50px;
-	margin: 3% 26%; padding-top : 2%;
+	border: 1px solid #eeeeee;
+	margin: 7% 26%;
 	font-size: 20px;
-	font-family: 'Happiness-Sans-Title';
 }
 
 /* 로그인 박스 아이디, 비밀번호 위치*/
@@ -55,36 +96,57 @@ a { color: black !important; text-decoration: none !important; }
 }
 
 /* 로그인 btn*/
+.login_btns{
+	padding-top: 8%;
+}
+
 .login_btn{
 	display: flex; justify-content: center;
-	font-size: 18px; margin-left: 5px;
+	font-size: 18px; 
+	margin-bottom: 20px;
 }
 .login_btn div{
 	padding: 1%;
 	font-family: "EliceDigitalBaeum-Bd";
 }
 .login_btn button{
-	border: 1px solid #646464; border-radius: 10px;
-	margin: 10px;
-	background-color: white;
+	border: 1px solid #eeeeee; border-radius: 10px;
+	font-family: 'EliceDigitalBaeum-Bd'; font-size: 15px;
+	background-color: #FF0080; color : white;
+	width: 270px; height: 40px;
 }
 
 /* 로그인박스 글자*/
-.login_chat_id{
-	padding-right: 30px;
-	font-family: 'Humanbumsuk';
+.login_chat_id {
+	margin-right: 20px;
+}
+.login_chat_pw {
+	margin-right: 5px;
 }
 
-/* 로그인박스 글자*/
-.login_chat_pw{
-	padding-right: 12px;
+.login_chat_id, .login_chat_pw {
 	font-family: 'Humanbumsuk';
 }
 
 /* 로그인 input 박스*/
 .login_idpw input{
 	border-radius: 5px;
+	width: 200px;
+	margin-bottom: 4%;
 }
+
+/* 회원가입, 아이디찾기 비밀번호찾기 버튼 모음*/
+.login_btn2{
+	display: flex;
+	justify-content: center;
+	font-size: 10px; font-family: 'Humanbumsuk';
+	margin: 0 auto;
+}
+.login_btn2 button{
+	width: 90px;
+	border: 1px solid #eeeeee;
+}
+
 
 /* 에러 표시 */
 .id_error, .pw_error, .error{
@@ -94,13 +156,123 @@ a { color: black !important; text-decoration: none !important; }
 	color: red;
 }
 
-/* 로그인 페이지 영화 포스터*/
-.login_img{
-	text-align: center;
-}
-.login_img img{
-	width: 150px;
-	height: 220px;
-	margin-bottom: 40px;
+/* 헤더 위 광고 배너  */
+.banner_img{
+	background-color: black;
 }
 
+.xbtn{
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+
+.header_banner{
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* 푸터 광고 배너 */
+
+.footer_img{
+	background-color: #141414;
+}
+
+.xbtn2{
+	border: 1px solid #141414;
+	background-color: #141414;
+	color: white;
+}
+
+.footer_banner{
+	text-align: center;
+	margin: 0 auto;	
+}
+
+/* 아이디 찾기 모달 */
+.modal_wrap, .modal_wrap2{
+	position: fixed;	/* 위치 고정 */
+	top : 0; left: 0;	/* 시작점 */
+	/* 모든 영역 배경*/
+	width: 100%; height: 100%;
+
+	background-color: rgba( 0 , 0, 0, 0.3); /* 검정색에 50% 투명도 */
+	/* rgb( 0, 0, 0 ) : 검정색 */
+	/* rgba( 0, 0, 0, 투명도 )*/
+	z-index : 1030; /* 겹쳤을 때 우선순위*/ 	/* 헤더에 부트스트랩 .sticky-top { z-index : 1020 } */
+	
+	/* 기본 값 : 처음에 모달 숨기기 */
+	display: none;
+}
+
+/* 모달 상자 */
+.modal_box, .modal_box2{
+	background-color: white; width: 30%; 
+	border-radius: 15px;
+	padding: 4%;
+	margin: 10% 35% 20%;
+}
+
+/* 모달 텍스트 */
+.modal_title, .modal_title2{
+	text-align: center;
+	margin-bottom: 15%;
+	font-family: 'LINESeedKR-Bd';
+}
+
+/* 모달 이름 */
+.nametext, .emailtext, .nametext2, .emailtext2{
+	text-align: center;
+}
+
+.nametext, .nametext2{
+	margin: 4%;
+	font-family: 'LINESeedKR-Bd';
+}
+
+.emailtext, .emailtext2{
+	font-family: 'LINESeedKR-Bd';
+}
+
+.name_find{
+	margin-left: 35px;
+	width: 57%;
+}
+.name_find2{
+	margin-left: 47px;
+	width: 57%;	
+}
+
+.email_find{
+	width: 52%;
+	margin-left: 20px;
+	margin-bottom: 5%;
+}
+
+.email_find2{
+		width: 52%;
+	margin-left: 23px;
+	margin-bottom: 5%;
+}
+
+/* 모달 버튼 목록 */
+.modal_btns, .modal_btns2{
+	display: flex; justify-content: flex-end;
+	margin: 5% 0%;
+}
+
+.modal_box button, .modal_box2 button{
+	background-color: white;
+	padding: 5px 20px;
+	margin-left: 3%;
+	margin-top: 5%;
+	border: 1px solid #eeeeee;
+	border-radius: 10px;
+}
+
+.real_idtext, .real_id, .real_idtext2, .real_id2{
+	display: flex;
+	color: red;
+	margin-left: 15%;
+	
+}

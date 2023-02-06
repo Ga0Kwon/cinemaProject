@@ -1,16 +1,13 @@
 
-/* 아이디, 비밀번호 배열 선언*/
+/* 아이디, 비밀번호, 이메일 배열 선언*/
 
 let userArray = [ 
-				{ id: 'qwe123' , pw: 'qwe123'} ,
-				{ id: 'asd123' , pw: 'asd123'} ,
-				{ id: 'zxc123' , pw: 'zxc123'} ,
-				{ id: 'movie' , pw: 'movie'} ,
-				{ id: 'actor' , pw: 'actor'} ,
+				{ id: 'qwe123' , pw: 'qwe123' , email: 'qwe123@naver.com'} ,
+				{ id: 'asd123' , pw: 'asd123' , email: 'qwe123@naver.com'} ,
+				{ id: 'zxc123' , pw: 'zxc123' , email: 'qwe123@naver.com'} ,
+				{ id: 'movie' , pw: 'movie' , email: 'qwe123@naver.com'} ,
+				{ id: 'actor' , pw: 'actor' , email: 'qwe123@naver.com'} ,
 			]
-
-/* 등록되어 있는 영화 목록 */
-
 
 
 function singupbtn(){ // f s
@@ -18,7 +15,7 @@ function singupbtn(){ // f s
 	let pw = document.querySelector('.pw').value;
 	let pw_check = document.querySelector('.pw_check').value;
 	let name = document.querySelector('.name').value;
-	let sname = document.querySelector('.sname').value;
+	let email = document.querySelector('.email').value;
 	let mw = document.querySelector('.mw').value;
 
 	// 유효성검사
@@ -57,8 +54,19 @@ function singupbtn(){ // f s
 			}else if ( name.length != 0)	{
 			document.querySelector('.name_null').style.display = 'none';				
 			}
+		// 4. email 빈 값일 경우, 빈 값이 아닐 경우
+		if ( email.length == 0 ){
+			document.querySelector('.email_null').style.display = 'block';
+			check = false;
+			} else if ( email.length != 0 && email.indexOf('@') == -1){
+			document.querySelector('.email_null').style.display = 'none';
+			document.querySelector('.email_null2').style.display = 'block';
+			check = false;
+			} else if ( email.length != 0 && email.indexOf('@') != -1 ){
+			document.querySelector('.email_null2').style.display = 'none';
+			}
 		
-		// 4. 성별이 체크되어 있지 않은 경우
+		// 5. 성별이 체크되어 있지 않은 경우
 		if ( mw == "성별" ){
 			document.querySelector('.mw_null').style.display = 'block';
 			check = false;
@@ -75,15 +83,19 @@ function singupbtn(){ // f s
 		}
 	}
 	
-	// 유효성검사 통과했을 경우 모달박스 켜기
-	if(check) { document.querySelector('.modal_wrap').style.display = 'block';  }
+	if(check){
+		location.href="login.html"
+	}
 	
 }// f e
 
-/* location.href = 'login.html'; */
+	// x 버튼 누를시 광고 삭제
+document.querySelector('.xbtn').addEventListener('click', (e) => {
+	document.querySelector('.header_banner').style.display = 'none';
+})
 
-// 모달 기능
-	// 모달 닫기
-function modal(){location.href = 'login.html';}
+document.querySelector('.xbtn2').addEventListener('click', (e) => {
+	document.querySelector('.footer_banner').style.display = 'none';
+})
 
 

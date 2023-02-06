@@ -1,15 +1,11 @@
 *{padding:0px; margin:0px; }
-.wrap{background-color:rgba(0,0,0,0.5);
-	overflow:scroll;  position:fixed; 
-	top:0; left:10%; 
+.wrap{
+	overflow:scroll;  position:fixed; top:0; left:10%; 
 	width:70%; height:100%;
-	display:flex; flex-direction: column;
-	justify-content: center;align-items: center;
+	display:flex; flex-direction: column; justify-content: center;align-items: center;
 	z-index:1030; 
 	/* 초기 */
 	display:none;
-	
-
 	}
 
 /*스크롤바 없애는 기능  */
@@ -17,49 +13,65 @@
 
 /* 닫기  */
 .close{width:80px; height:80px;background-color: white;
-	   position: fixed; top:10%; right:15%;}
+	   position: fixed; top:15%; right:16.3%;}
+
+/* h3 */
+.head3{margin:15px;}
+
+/* 상,중,하단 + 리뷰쓰는곳 */
+.top_movie_information, .midder_information, .footer_information, .write_review
+{padding:2% 5%; display:flex; background-color:#141414; 
+justify-content: space-between; width:100%; border-bottom:2px solid gray;}
 
 /* 상단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
-.top_movie_information, .midder_information, .footer_information
-{padding:2% 5%; display:flex; background-color:white; 
-justify-content: space-between; width:100%; border-bottom:2px solid black;}
 
+/* 상단 이미지 */
+.information_header{width:100%; display:flex; height:576px;}
+
+
+.header_img {height:100%; width:100%;
+			background: no-repeat 100%; overflow: hidden;
+			}
+
+/* 그라데이션을 주면서 좌우에 어색하지않게끔 채우고싶지만 어렵다.. */
+
+/*상단 영화정보창  */
 .top_summary{display: flex; justify-content: space-between; 
 			padding:3% 5%; flex-direction: column; }
 
 /* 개요,감독,출연,등급,흥행 */
-.top_introduce{width:100%; padding:1% 0%; border-bottom:1px solid #F0F0F0;}
+.top_introduce{width:100%; padding:1% 0%; border-bottom:1px solid gray;}
 
 /*  제목2개  */
-.t_title{border-bottom:1px solid #F0F0F0; padding-bottom:10px;}
+.t_title{border-bottom:1px solid gray; padding-bottom:10px;}
 
-.title{font-weight: bold;  color:black;}
+.title{font-weight: bold;  color:white;}
 /* 영문제목 */
 .e_title{ font-size:12px; color:gray;}
 
 
 /* 별점 */
-.rating{padding:3% 0%; border-bottom:1px solid #F0F0F0; 
+.rating{padding:3% 0%; border-bottom:1px solid gray;;
 		font-size:20px; font-weight: bold; 
 		display:flex; flex-direction: column;}
-.viewer{width:40%;  color:black;}
+.viewer{width:40%;  color:white;}
 .score{display:flex;}
 
 .star{width:100px; background-position: top; }
 .star, .right-star{  background:url("../movies_DB/img/별점.png")no-repeat; 
 width:100px; height: 18px; display:inline-block;
  margin:5px 0px 0px 5px;}
-.right-star{background-position:left bottom; margin:0px;  vertical-align:top; }		
+.right-star{background-position:left bottom; margin:0px;  vertical-align:top; margin-top:2px;  }		
 
 
 /* 개요,감독,출현,등급,흥행 */
 .summary{ font-size:14px; padding:2px 0px; text-align: left; }
 
 /* 요약 서브제목 */
-.sub_title{font-weight: bold; font-size:16px; padding-right:5px;  color:black;}
+.sub_title{font-weight: bold; font-size:16px; padding-right:5px;  color:white;}
 
 /* 요약 설명 */
-.capsule{padding:2px;  color:black;}
+.capsule{padding:2px;  color:white;}
 
 /* 이미지 */
 .movie_img{width:25%; padding-right:3%;}
@@ -67,30 +79,97 @@ width:100px; height: 18px; display:inline-block;
 
 /* 중단 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 /* 중단정보창 */
-.information{width:50%; }
+.information{width:70%; }
 
 /* 영화 탭 */
-.movie_tap{list-style: none; border-top:2px solid black; padding-left:0px; 
+.movie_tap{list-style: none; border-top:1px solid gray; padding-left:0px; 
 border-bottom:1px solid gray;}
-.movie_tap li{display:inline-block; cursor:pointer;  color:black;
+.movie_tap li{display:inline-block; cursor:pointer;  color:white;
 padding:10px;}
 
 
 /* 줄거리 */
-.data{ color:black; width:70%;}
+.data{ color:white; width:100%; 
+display:flex; flex-wrap: wrap; justify-content: space-between;}
+
+.tap_Select{ /*카테고리를 선택했을 때 디자인 바꿈*/
+	color: black !important;
+	border-bottom: 3px #ff5151 solid;
+	padding-bottom : 5px !important;
+	font-weight: bold;
+	background-color:white;
+	
+}
+
+
+/* 배우/제작진 */
+.movie_actor{display:flex; margin:20px; flex-wrap: wrap; width:45%;}
+
+/* 배우/제작진 이미지 */
+.movie_actor img{margin:10px;}
+
+/* 배우/제작진 정보 */
+.actor_info{display:flex; flex-direction: column; margin:10px;}
+
+.actor_name{margin-bottom:3px;}
 
 /*하단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+/* 전체 리뷰 */
 .evaluate{width:100%;}
-.user{display:flex; padding:10px; }
-.user_content, .user_star, .u_star_num{color:black !important;}
-.user_star{width:10%;}
-.u_star_num{width:8%; vertical-align: top; text-align: center;}
-.user_content{width:80%;}
 
+/* 하나의 리뷰 */
+.user{display:flex; padding:10px; }
+
+/* 하나의 리뷰(전체) */
+.user_content, .user_star, .u_star_num{color:white !important;}
+
+/* 전체별점 */
+.user_star{width:10%;}
+
+/* 별점 수치화 */
+.u_star_num{width:8%; vertical-align: top; text-align: center;
+			font-size:16px; font-weight: bold;}
+
+/* 하나의 댓글 */
+.user_content{width:80%; font-size:18px;}
+
+/*  회색별 */
 .u_star{width:100px; background-position: top;}
+
+/* 회색+ 노란별 */
 .u_star, .u_right_star{ height:18px; display:inline-block;
 background-image: url("../movies_DB/img/별점.png");background-repeat: no-repeat;}
-.u_right_star{background-position:left bottom; vertical-align:top; margin-left:1px;}
-.u_star_num{font-size:13px; font-weight: bold;}
-.user_content{font-size:13px;}
 
+/* 노란별 */
+.u_right_star{background-position:left bottom; vertical-align:top; margin-left:1px;  margin-top:2px; }
+
+
+/* col,row하기위한 도구 */
+.fcol{display:flex; flex-direction: column; width:100%;}
+.frow{display:flex; width:100%;}
+
+/* 리뷰란 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+/* 리뷰쓰기 전체 */
+.w_review{width:100%; display:flex; padding:10px; }
+
+/* 별점 구역 */
+.write_star{width:12%;}
+
+/* 기존 별점 */
+.w_star{position: relative; font-size:20px; color:#ddd}
+
+/* 노란 별점 */
+.w_star span{width:0; 
+position: absolute; left:0; color:yellow;
+overflow: hidden; pointer-events:none;}
+
+/* 숨겨진 별점의 드래그 */
+.w_star input { width: 100%; height: 100%;
+    position: absolute; left: 0; opacity: 0;
+    cursor: pointer; }
+    
+/* 별점 수치 */
+.star_num{font-size:16px; width:5%; text-align: center; margin:0px 10px;}
+
+.btn{height:80px;}
