@@ -56,6 +56,11 @@ document.querySelector('.search_btn').addEventListener('click', (e)=>{
 	
 	//1) input text를 통해 입력받은 값을 변수에 저장
 	let inputMovieName = document.querySelector('.searchMovieTitle').value;
+	
+	if(inputMovieName == ""){ /*만약, input 값에 입력을 안한 경우 더이상 함수를 실행하지 않는다. */
+		return;
+	}
+	
 /*	console.log(inputMovieName)*/
 	/*let categoryTitle = [];*/ //일부 혹은 전체 영화 제목이 들어간 카테고리명을 담을 변수
 	let findMovieName = []; // 입력한 정보에 관련된 영화 이름들이 들어갈 배열에 저장 
@@ -112,20 +117,20 @@ function printMovie(index){
 						</div>
 						<div class = "movie_grade">
 							★★★★★ 
-							<span style="cursor: default; width : ${movieInfo[i].star*4.1}% !important" " class="star_grade">★★★★★</span>
-							<span class = "number_grade">${movieInfo[i].star}</span>
+							<span style="cursor: default; width : ${movieInfo[i].star*4.0}% !important" " class="star_grade">★★★★★</span>
+							<span class = "number_grade">${movieInfo[i].star == 0 ? "개봉예정" : movieInfo[i].star}</span>
 						</div>
-						<div class = "movie_TitleBox">
-							<span class = "movie_name">${movieInfo[i].name}</span>
+						<div class = "movie_ReleaseBox">
+							<span class = "movie_ReleaseDate">개봉일 : ${movieInfo[i].release}</span>
 						</div>
 					</div> `
 			}
 		}
 				
-		/*movieInfo[i].star*4.1에서 4.1을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
+		/*movieInfo[i].star*4.0에서 4.0을 곱해준 이유는 margin이나 다른 것들로 인해 width가 78만 넘어가도 별 5개로 채워짐.
 		  그래서, 10을 곱할 수는 없었고, 계산을 해보니 100%가 별 5개니까 별 한개당 20%인셈 
 		  만약, 별점이 7.99일경우 10을 곱하면 79.9이고, 별 한개가 20이니까 별 3개하고 19.9 별 3개에 거의 꽉 찬 별 한개가 칠해지면 됨.
-		  그렇게 나오도록 수를 곱해봤는데 6이 가장 적당했기 때문에, 4.1으로 선정*/
+		  그렇게 나오도록 수를 곱해봤는데 4.0이 가장 적당했기 때문에, 4.1으로 선정*/
 	}
 	document.querySelector('.content').innerHTML = html;
 }
@@ -160,10 +165,10 @@ function printInputNameMovie(findMovieName){
 						<div class = "movie_grade">
 							★★★★★ 
 							<span style="cursor: default; width : ${movieInfo[i].star*4.1}% !important" " class="star_grade">★★★★★</span>
-							<span class = "number_grade">${movieInfo[i].star}</span>
+							<span class = "number_grade">${movieInfo[i].star == 0 ? "개봉예정" : movieInfo[i].star}</span>
 						</div>
-						<div class = "movie_TitleBox">
-							<span class = "movie_name">${movieInfo[i].name}</span>
+						<div class = "movie_ReleaseBox">
+							<span class = "movie_ReleaseDate">개봉일 : ${movieInfo[i].release}</span>
 						</div>
 					</div> `
 			}
