@@ -41,3 +41,8 @@ function movieAgeColor(index){
 		return "#BD0027";
 	}
 }
+
+/*topbanner을 삭제할려고 할때 display none하는 함수 */
+function topbannerDelete(){
+	document.querySelector('.topbanner').style.display = "none";
+}
