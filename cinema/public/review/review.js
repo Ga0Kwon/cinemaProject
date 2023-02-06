@@ -197,6 +197,11 @@ function comment(){
 	
 	evaluate[Num].user.push({netizen: netizen, comment: comment});
 	evaluate_print(Num); //영화리뷰출력
+	
+	//리뷰 초기호
+	document.querySelector(`.w_star span`).style.width = `${0}%`;
+	document.querySelector(`.star_num`).innerHTML = `${0} 점`
+	document.querySelector('.comment').value=``;
 
 }
 
