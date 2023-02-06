@@ -16,7 +16,9 @@ a{
 }
 
 ul{ list-style: none; }
-
+/*  */
+.topbanner{ text-align: center; }
+.bottombanner{ text-align: center; }
 /*---------------헤더 메뉴---------------*/
 .topmenu{
 	display: flex;
@@ -33,22 +35,45 @@ ul{ list-style: none; }
 	text-align: center;
 	color:#ff0000;
 }
-/* 메뉴 */
-.menu1{ margin-top: 25px;}
+/* 박스오피스 */
+.boxOffice{ margin-top: 25px;}
 /*---------------본문 아이템---------------*/
 .itembox{
 	display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
 }
-.item{
-	width: 25%;
+.item1{
+	width: 20%;
     margin: 2%;
 }
-.item img{ width: 100%; }
-.name{
-	font-size: 18px;
-	margin: 5% 0%;
+.item1 img{ width: 100%; }
+.name1{
+	text-align: center;
+	font-size: 25px;
+	margin-top: 20px;
+}
+.date1{
+	text-align: center;
+	font-size: 15px;
+	color: #505050;
+}
+
+/*  */
+.item2{
+	width: 15%;
+    margin: 2%;
+}
+.item2 img{ width: 100%; }
+.name2{
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.date2{
+	text-align: center;
+	font-size: 15px;
+	color: #505050;
 }
 /*---------------하단---------------*/
 
