@@ -19,6 +19,15 @@ let movieInfo = [{name : '더 퍼스트 슬램덩크', img : 'slam_dunk', catego
 				 {name : '다음 소희', img : 'NextSohee', category : ['드라마'], age : 15, star : 0, release : '2023.02.08'},
 				 {name : '네가 떨어뜨린 푸른 하늘', img : 'TheBlueSkiesatYourFeet', category : ['멜로/로맨스'], age : 12, star : 0, release : '2023.02.08'},
 				 {name : '이마 베프', img : 'IrmaVep', category : ['코미디'], age : 15, star : 7.47, release : '2023.02.01'}]
+
+/*해당 사용자 정보 */
+let adminInfo = {
+	age : 20, 
+	bookmark : ['아바타', '영웅','오늘밤, 세계에서 이 사랑이 사라진다해도','타이타닉', '코코', '다음 소희']
+}
+
+/*고객을 담는 객체 배열 */
+let customers = [{name : 'admin', password : "1234", info : adminInfo }]
 				 
 /* 영화 관람 영령에 따라 관람가부분 백그라운드 바꿀 수 있도록 */
 function movieAgeColor(index){
