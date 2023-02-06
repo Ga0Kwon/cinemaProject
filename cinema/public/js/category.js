@@ -142,7 +142,7 @@ function printInputNameMovie(findMovieName){
 		for(let j = 0; j < findMovieName.length; j++){
 			/* 해당 영화의 카테고리와 영화 이름 배열과 크기는 같을 수밖에 없음 */
 			if(movieInfo[i].name == findMovieName[j]){ //만약 인수로 받아온 영화이름과 객체배열 영화이름과 같다면 출력해줘야함!
-				html += `<div class = "movie_item">
+				html += `<div class = "movie_item" onClick = "inputBookmark(${i})">
 							<div class = "movie_img">
 							<span class = "movie_category">${findMovieCategory[j]}</span>
 							<span class = "movie_age" style = "background-color : ${ageColor} ">${movieInfo[i].age == 0 ? "전체" : movieInfo[i].age}</span>
