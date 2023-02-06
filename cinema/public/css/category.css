@@ -74,7 +74,7 @@ body{
 /*--------------------카테고리 선택 부분[input 입력으로] s--------------------*/
 .search_box{
 	display: flex;
-	margin-top : 0.5%;
+	margin : 20px 0px;
 }
 .blank_container{
 	width : 65%; /*공백 부분*/
@@ -160,7 +160,7 @@ body{
 
 /*평점에 따라 별의 색을 채울 span*/
 .star_grade{
-	width : 0%; /*평점이 없을 경우는 가로가 0이어야함. -> 평점에 따라 가로를 키워야하니까*/
+	width : 0px; /*평점이 없을 경우는 가로가 0이어야함. -> 평점에 따라 가로를 키워야하니까*/
 	position: absolute; /*하위요소인 star_grade에 absolute*/
 	/*상위 요소에 맞춰 겹쳐야하기 때문에 left, top => 0*/
 	left : 0;
