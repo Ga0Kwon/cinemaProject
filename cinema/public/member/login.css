@@ -190,7 +190,7 @@ a { color: white !important; text-decoration: none !important; }
 }
 
 /* 아이디 찾기 모달 */
-.modal_wrap{
+.modal_wrap, .modal_wrap2{
 	position: fixed;	/* 위치 고정 */
 	top : 0; left: 0;	/* 시작점 */
 	/* 모든 영역 배경*/
@@ -206,37 +206,41 @@ a { color: white !important; text-decoration: none !important; }
 }
 
 /* 모달 상자 */
-.modal_box{
+.modal_box, .modal_box2{
 	background-color: white; width: 30%; 
 	border-radius: 15px;
 	padding: 4%;
-	margin: 15% 35% 20%;
+	margin: 10% 35% 20%;
 }
 
 /* 모달 텍스트 */
-.modal_title{
+.modal_title, .modal_title2{
 	text-align: center;
 	margin-bottom: 15%;
 	font-family: 'LINESeedKR-Bd';
 }
 
 /* 모달 이름 */
-.nametext, .emailtext{
+.nametext, .emailtext, .nametext2, .emailtext2{
 	text-align: center;
 }
 
-.nametext{
+.nametext, .nametext2{
 	margin: 4%;
 	font-family: 'LINESeedKR-Bd';
 }
 
-.emailtext{
+.emailtext, .emailtext2{
 	font-family: 'LINESeedKR-Bd';
 }
 
 .name_find{
 	margin-left: 35px;
 	width: 57%;
+}
+.name_find2{
+	margin-left: 47px;
+	width: 57%;	
 }
 
 .email_find{
@@ -245,14 +249,19 @@ a { color: white !important; text-decoration: none !important; }
 	margin-bottom: 5%;
 }
 
+.email_find2{
+		width: 52%;
+	margin-left: 23px;
+	margin-bottom: 5%;
+}
 
 /* 모달 버튼 목록 */
-.modal_btns{
+.modal_btns, .modal_btns2{
 	display: flex; justify-content: flex-end;
 	margin: 5% 0%;
 }
 
-.modal_box button{
+.modal_box button, .modal_box2 button{
 	background-color: white;
 	padding: 5px 20px;
 	margin-left: 3%;
@@ -261,7 +270,7 @@ a { color: white !important; text-decoration: none !important; }
 	border-radius: 10px;
 }
 
-.real_idtext, .real_id{
+.real_idtext, .real_id, .real_idtext2, .real_id2{
 	display: flex;
 	color: red;
 	margin-left: 15%;

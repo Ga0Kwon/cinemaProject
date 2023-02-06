@@ -83,7 +83,19 @@ function singupbtn(){ // f s
 		}
 	}
 	
+	if(check){
+		location.href="login.html"
+	}
+	
 }// f e
 
+	// x 버튼 누를시 광고 삭제
+document.querySelector('.xbtn').addEventListener('click', (e) => {
+	document.querySelector('.header_banner').style.display = 'none';
+})
+
+document.querySelector('.xbtn2').addEventListener('click', (e) => {
+	document.querySelector('.footer_banner').style.display = 'none';
+})
 
 
