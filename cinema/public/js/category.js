@@ -107,9 +107,6 @@ function printMovie(index){
 	
 	for(let i = 0; i < movieInfo.length; i++){
 		let ageColor = movieAgeColor(i);
-		
-		let nGradeValue = returnDate(movieInfo[i].release);
-		console.log(nGradeValue);
 		/*console.log(ageColor);*/
 		for(let j = 0; j < movieInfo[i].category.length; j++){
 			if(movieInfo[i].category[j] == categoryArrays[index]){ //영화별로 장르가 한개인게 아니라, 반복문 중첩이어야한다.
@@ -178,28 +175,5 @@ function printInputNameMovie(findMovieName){
 		}
 	}
 	document.querySelector('.content').innerHTML = html;
-}
-
-function returnDate(releaseDate){
-	let date = new Date();
-	let fYear = date.getFullYear();
-	let fMonth = date.getMonth();
-	let fDate = date.getDate();
-	
-	let result =``;
-	if(fMonth < 10){
-		fMonth = "0" + fMonth;
-	}
-	
-	if(fDate < 10){
-		fDate = "0" + fDate;
-	}
-	
-	let compareDate = new Date(fYear + "." + fMonth + "." + fDate);
-	let inputreleaseDate = new Date(releaseDate);
-	if(compareDate > inputreleaseDate){
-		result = "개봉예정"
-	}
-	return result;
 }
 
