@@ -14,6 +14,7 @@ let posterList = [
 ]
 
 poster_print();
+
 function poster_print(){
 	html = ``
 	posterList.forEach( (o,i) => {
