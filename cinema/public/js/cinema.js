@@ -1,5 +1,5 @@
 //console.log('js')
-/*
+
 let posterList = [
 	{img : 'item1.jpg', title : '더 퍼스트 슬램덩크' , grade : 12} ,
 	{img : 'item2.jpg', title : '교섭' , grade : 12} ,
@@ -27,4 +27,4 @@ function poster_print(){
 				</div>`
 	})
 	document.querySelector('.itembox').innerHTML = html;
-}*/
+}
