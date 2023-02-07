@@ -59,15 +59,26 @@ ul{
 
 /*event-item : 이벤트 한개*/
 .evnet_items{
+	margin : 15px 9px;
 	background-color: white;
 	width: 30%;
+	height: 20%;
 }
-
+.event_info{
+	padding-top: 20px;
+}
+.evnet_items img{
+	width: 100%;
+	height: 259px;
+}
 .event_info span{
+	font-size :16px;
 	color : #141414;
 }
 
 .event_info p{
-	color : #141414;
+	padding-top : 20px;
+	font-size : 10px;
+	color : #666666;
 }
 /*-------------------------------본문 하단 e----------------------------*/
