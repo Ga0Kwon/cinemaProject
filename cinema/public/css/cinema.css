@@ -19,19 +19,15 @@ ul{ list-style: none; }
 /*  */
 .topbanner{ text-align: center; }
 .bottombanner{ text-align: center; }
-ul{ list-style: none; }
-/*  */
-.topbanner{ text-align: center; }
-.bottombanner{ text-align: center; }
 /*---------------헤더 메뉴---------------*/
 .topmenu{
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
-	font-size: 15px;
+	font-size: 18px;
 }
 
-.movelink{ font-size: 15px; }
+.movelink{ font-size: 18px; }
 /*---------------로고---------------*/
 .logo{
 	font-family: 'LINESeedKR-Bd';
@@ -41,45 +37,22 @@ ul{ list-style: none; }
 }
 
 /* 박스오피스 */
-.boxOffice{ margin-top: 25px;}
+.boxOffice{ margin-top: 40px;}
 /*---------------본문 아이템---------------*/
 .itembox{
 	display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center;
 }
-.item1{
-	width: 20%;
-    margin: 2%;
-}
-.item1 img{ width: 100%; }
-.name1{
-	text-align: center;
-	font-size: 25px;
-	margin-top: 20px;
-}
-.date1{
-	text-align: center;
-	font-size: 15px;
-	color: #505050;
-}
-
-/*  */
-.item2{
+.item{
 	width: 15%;
     margin: 2%;
 }
-.item2 img{ width: 100%; }
-.name2{
+.item img{ width: 100%; }
+.name{
 	text-align: center;
 	font-size: 20px;
-	margin-top: 10px;
-}
-.date2{
-	text-align: center;
-	font-size: 15px;
-	color: #505050;
-	background-color: #ff0000;
+	margin-top: 15px;
 }
 /*---------------하단---------------*/
 
