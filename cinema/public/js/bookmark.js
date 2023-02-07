@@ -29,16 +29,3 @@ function printBookMark(){
 	}
 	document.querySelector('tbody').innerHTML = html;
 }
-/*북마크 열에 별을 클릭하면 해제 여부를 확인하고 해제해야한다 -> 일단 북마크한 것만 출력하므로 별위 색은 다 클릭되어있k */
-function deleteBookmark(i){
-	let selectBookMark = document.querySelectorAll('.t_dMovieBookMark');
-	
-	if(confirm(adminInfo.bookmark[i] + "을/를 북마크에서 삭제하시겠습니까?")){
-		adminInfo.bookmark.splice(i, 1);
-		selectBookMark[i].classList.remove('selectBookMark');
-		console.log(adminInfo);
-		alert('삭제되었습니다.');
-	}
-	printBookMark();
-}
-
