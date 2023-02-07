@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<!-- 반응형 : view port -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- 부트스트랩 : CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	 <!-- 메인 페이지 헤더를 가져오기 위한 사용자 정의 css -->		   
+	 <link href = "../css/cinema.css" rel = "stylesheet">
+	
+	<!-- 사용자 정의 -->
+	<link href="write.css" rel="stylesheet">	
+	
+<title>글쓰기</title>
+</head>
+<body>
+
+	<!-- 헤더 -->
+		<div class="header" style="background-color: #2c2c2c;">
+			
+			<!-- 탑배너 -->
+			<div class="topbanner" style="background-color: #FF7170;">
+				<img alt="" src="../img/topbanner.jpg">
+				<button onClick = "topbannerDelete()" type="button" style="border: none; background: none;">X</button>
+			</div>
+	
+			<!-- 상단 네비게이션 -->
+			<!-- ( 오른쪽 상단 : 로그인, 회원가입, 마이페이지, 즐겨찾기 ) -->
+			<div class="navbar navbar-expand-lg" style="padding-bottom: 0px;">
+				<div class="container">
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav movelink">
+							<li class="nav-item"><a class="nav-link" href="https://www.cgv.co.kr/">CGV</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://www.lottecinema.co.kr/NLCHS">롯데시네마</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://www.megabox.co.kr/">메가박스</a></li>
+						</ul>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav topmenu">
+							<li class="nav-item"><a class="nav-link" href="../member/login.html">로그인</a></li>
+							<li class="nav-item"><a class="nav-link" href="../member/signup.html">회원가입</a></li>
+							<li class="nav-item"><a class="nav-link" href="../member/mypage.html">My page</a></li>	
+							<li class="nav-item"><a class="nav-link" href="../category/category.html">영화검색</a></li>
+							<li class="nav-item"><a class="nav-link" href="../bookmark/bookmark.html">즐겨찾기</a></li>
+								<li class="nav-item"><a class="nav-link" href="service.html">문의사항</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 로고 -->
+			
+			<div class="logo" style="padding-bottom: 40px;"><a href="../cinema.html"><img src = "../img/mainlogo.png"></a></div>
+		</div>
+		
+	<!-- 중단 -->
+	<div class="midder">
+		<div class="container">
+			<h3 class="m_h3"> 문의 내용 </h3>
+			
+			<form>
+			
+				<table class="write_table">
+					<tr>
+						<td > 분류</td> <td colspan="2" > <select class="sel">	
+											<option disabled="disabled" selected  value="false"> 문의 종류 </option>
+										   	<option > 문의 </option>
+										   	<option> 칭찬 </option>
+										   	<option> 불만 </option>
+										   	<option> 건의 </option>
+										   </select> </td>
+					</tr>
+					
+					<tr>
+						<td > 종류</td> <td><input type="radio" name="check" checked="checked" class="rad"> 버그</td> <td><input type="radio" name="check"> 기타</td>
+					</tr>
+					
+					<tr>
+						<td > 제목</td> <td colspan="2"><input type="text" placeholder="제목을 입력해주세요" class="form-control title"> </td>
+					</tr>
+					
+					<tr>
+						<td > 내용</td> <td colspan="2"> <textarea rows="6" cols="30" class="form-control textarea"></textarea> </td>
+					</tr>
+					
+					<tr>
+						<td > 첨부파일</td> <td colspan="2"> <input type="file"></td>
+					</tr>
+				</table>
+				
+				
+				<h3 class="m_h3"> 고객 정보</h3>
+				<table class="write_table">
+					
+				
+					
+					<tr>
+						<td > 성명</td> <td colspan="3"><input type="text" class="form-control name"> </td>
+					</tr>
+					
+					<tr>
+						<td > 연락처</td> <td colspan="3" class="t_tel">
+										<input type="text" class="form-control tel one" >
+										<input type="text" class="form-control tel two" >
+										<input type="text" class="form-control tel thr" >   </td>
+					</tr>
+					
+					<tr>
+						<td > 이메일</td> <td colspan="2" class="t_email"> <input type="text" class="form-control email five" >@
+														 <input type="text" class="form-control email six" ></td>
+					</tr>
+				</table>
+				
+				
+				
+				
+				
+					<div class="col-md-6 offset-md-3 t_btn"> 
+					<button type="button" class="btn btn-light" onclick="cancel()"> 취소 </button>
+					<button type="button" class="btn btn-light" onclick="send()"> 제출 </button>
+					</div>
+			</form>
+		</div>
+	</div>
+	
+	
+	
+
+	<!-- 하단 -->
+	<div class="footer" style="padding: 40px 0px 20px 0px;      background-color: #141414">
+	
+		<div class="footbox">
+			<div class="footlogo"><img alt="" src="../img/footlogo.png"></div>
+			<div class="footnav">
+				<ul style="display: flex; font-size: 15px;">
+					<li>회사소개</li>
+					<li>이용약관</li>
+					<li>개인정보처리방침</li>
+					<li>법적고지</li>
+					<li>편성기준</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" ></script>
+<script src="write.js"></script>
+
+</body>
+</html>
