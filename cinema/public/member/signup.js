@@ -97,5 +97,3 @@ document.querySelector('.xbtn').addEventListener('click', (e) => {
 document.querySelector('.xbtn2').addEventListener('click', (e) => {
 	document.querySelector('.footer_banner').style.display = 'none';
 })
-
-
