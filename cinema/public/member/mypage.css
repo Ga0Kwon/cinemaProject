@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* a태그 기본값 */
+a { color: white !important; text-decoration: none !important; }
+
+/*---------------헤더 메뉴---------------*/
+.header{
+	background-color: #2c2c2c;
+}
+
+.topmenu{
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	font-size: 15px;
+	font-style: white;
+	font-family: 'LINESeedKR-Bd';
+}
+
+.movelink{ 
+	font-size: 15px;
+	font-family: 'LINESeedKR-Bd'; }
+
+.movelink li{
+	color: white;
+}
+
+/* 헤더 위 광고 배너  */
+.banner_img{
+	background-color: black;
+}
+
+.xbtn{
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+
+.header_banner{
+	text-align: center;
+	margin: 0 auto;
+}
+
+	
+/*---------------로고---------------*/
+.logo{
+	font-size: 80px;
+	text-align: center;
+	color:#ff0000;
+}
+
+/*-------------mypage 시작 ---------*/
+
+/* mypage 틀 */
+.do{
+	background-color: #eeeeee;
+	height: 800px !important;
+	margin-top: 4%; margin-bottom: 5%;
+}
+
+/* mypage 사람 img */
+.do img{ border-radius: 50%; margin-left: 3%;}
+
+/* mypage title*/
+.title_text{ font-size: 45px; font-family: 'LINESeedKR-Bd';color: #FF0080; 
+margin: 3%; padding: 2%;}
+
+/* mypage title info*/
+.title_info{  display: inline-block; border-bottom: 1px solid #A4A4A4; margin-left: 40px; }
+.title_info1{ font-size: 35px; font-weight: bold; }
+.title_info2{ font-size: 20px; }
+
+/* mypage title content*/
+.title_content{ display: inline-block; margin: 4%; width: 25%;  }
+.title_info3 { 
+	margin: 5%; 
+	font-family: 'EliceDigitalBaeum-Bd'; 
+	font-size: 28px; 
+	padding: 3%;
+	}
+
+.review{
+	border-bottom: 1px solid #A4A4A4;
+	width: 85%; padding-top: 5%; margin: 8px;
+	font-family: 'EliceDigitalBaeum-Bd';
+}
+
+.review button{
+	font-family: 'EliceDigitalBaeum-Bd'; font-size: 13px;
+	border-radius: 15px; border: 1px solid #A4A4A4; margin-left: 3%;
+}
+
+.review span{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.review2{
+	border-bottom: 1px solid #A4A4A4;
+	width: 85%;
+	display: flex; justify-content: space-between;
+	font-family: 'EliceDigitalBaeum-Bd';
+	margin: 50px 50px 50px 10px;
+}
+
+.review3{
+	margin-top: 20%;
+}
+
+.review2 select{
+	margin-bottom: 5px;
+}
+
+
